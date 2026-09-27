@@ -13,7 +13,12 @@ Aplikasi front-end bertema kesehatan (E-Health) yang dibangun menggunakan **HTML
 ###  Halaman Login (`pages/login.html`)
 - Tampilan card login di tengah layar, responsive mengikuti lebar layar HP
 - Input username dan password dengan placeholder
-- Tombol "Masuk" dengan warna brand (hijau tosca)
+- Tombol "Masuk" dengan warna pink
 
+
+### 🛒 Halaman Toko Kesehatan (`pages/toko-kesehatan.html`)
+- List produk obat dalam bentuk grid card, responsive 
+- Tiap card menampilkan gambar , nama produk, harga, diskon, dan harga coret
+- Tombol tambah di tiap card 
 
 
