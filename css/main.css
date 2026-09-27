@@ -5,7 +5,7 @@
 @import url('components/card.css');
 @import url('components/input.css');
 @import url('components/button.css');
-@import url('components/product-card.css');
+@import url('components/product_card.css');
 
 @import url('pages/login.css');
-@import url('pages/toko-kesehatan.css');
+@import url('pages/toko_kesehatan.css');
