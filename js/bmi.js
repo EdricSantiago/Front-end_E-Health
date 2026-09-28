@@ -1,4 +1,3 @@
-// js/bmi.js
 document.addEventListener('DOMContentLoaded', function () {
     const maleOpt = document.getElementById('opt-male');
     const femaleOpt = document.getElementById('opt-female');
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultValue = document.getElementById('result-value');
     const resultStatus = document.getElementById('result-status');
 
-    // Toggle Pilihan Gender
     maleOpt.addEventListener('click', function () {
         maleOpt.classList.add('active');
         femaleOpt.classList.remove('active');
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
         maleOpt.classList.remove('active');
     });
 
-    // Validasi Input
     function checkInputs() {
         const height = parseFloat(heightInput.value);
         const weight = parseFloat(weightInput.value);
@@ -37,9 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     heightInput.addEventListener('input', checkInputs);
     weightInput.addEventListener('input', checkInputs);
 
-    // Hitung BMI
     btnCalculate.addEventListener('click', function () {
-        const height = parseFloat(heightInput.value) / 100; // Konversi cm ke meter
+        const height = parseFloat(heightInput.value) / 100;
         const weight = parseFloat(weightInput.value);
 
         if (!height || !weight) return;
