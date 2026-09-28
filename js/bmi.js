@@ -1,0 +1,64 @@
+// js/bmi.js
+document.addEventListener('DOMContentLoaded', function () {
+    const maleOpt = document.getElementById('opt-male');
+    const femaleOpt = document.getElementById('opt-female');
+    const heightInput = document.getElementById('height');
+    const weightInput = document.getElementById('weight');
+    const btnCalculate = document.getElementById('btn-calculate');
+    const resultBox = document.getElementById('result-box');
+    const resultValue = document.getElementById('result-value');
+    const resultStatus = document.getElementById('result-status');
+
+    // Toggle Pilihan Gender
+    maleOpt.addEventListener('click', function () {
+        maleOpt.classList.add('active');
+        femaleOpt.classList.remove('active');
+    });
+
+    femaleOpt.addEventListener('click', function () {
+        femaleOpt.classList.add('active');
+        maleOpt.classList.remove('active');
+    });
+
+    // Validasi Input
+    function checkInputs() {
+        const height = parseFloat(heightInput.value);
+        const weight = parseFloat(weightInput.value);
+
+        if (height > 0 && weight > 0) {
+            btnCalculate.classList.add('active');
+            btnCalculate.removeAttribute('disabled');
+        } else {
+            btnCalculate.classList.remove('active');
+            btnCalculate.setAttribute('disabled', 'true');
+        }
+    }
+
+    heightInput.addEventListener('input', checkInputs);
+    weightInput.addEventListener('input', checkInputs);
+
+    // Hitung BMI
+    btnCalculate.addEventListener('click', function () {
+        const height = parseFloat(heightInput.value) / 100; // Konversi cm ke meter
+        const weight = parseFloat(weightInput.value);
+
+        if (!height || !weight) return;
+
+        const bmi = (weight / (height * height)).toFixed(1);
+        let status = '';
+
+        if (bmi < 18.5) {
+            status = 'Berat Badan Rendah';
+        } else if (bmi >= 18.5 && bmi <= 22.9) {
+            status = 'Berat Badan Normal';
+        } else if (bmi >= 23 && bmi <= 24.9) {
+            status = 'Berat Badan Berlebih';
+        } else {
+            status = 'Obesitas';
+        }
+
+        resultValue.textContent = bmi;
+        resultStatus.textContent = status;
+        resultBox.style.display = 'block';
+    });
+});
