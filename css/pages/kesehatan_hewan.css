@@ -67,3 +67,64 @@
     border-radius: 8px;
     font-size: 14px;
 }
+
+.animal-services {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 24px;
+    text-align: center;
+}
+
+.animal-services h2 {
+    font-size: 28px;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.animal-services-text {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.animal-service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.animal-service-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+}
+
+.animal-service-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.animal-service-card h3 {
+    font-size: 17px;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.animal-service-card p {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.animal-service-card button {
+    background-color: #2f80ed;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    cursor: pointer;
+}
