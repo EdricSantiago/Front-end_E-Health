@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - HeiDoc</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="app">
+        <header class="home-header">
+            <div>
+                <p class="home-hello">Halo,</p>
+                <h1 class="home-name">Pengguna</h1>
+            </div>
+            <a href="pages/pengaturan.html" class="home-avatar">👤</a>
+        </header>
+
+        <div class="home-search">
+            <input type="text" id="search-input" placeholder="Cari layanan">
+        </div>
+
+        <section class="home-banner">
+            <p class="banner-tag">PROMO</p>
+            <h2>Diskon hingga 20% untuk vitamin</h2>
+            <a href="pages/toko.html" class="banner-btn">Belanja Sekarang</a>
+        </section>
+
+        <section>
+            <h2 class="section-title">Layanan</h2>
+            <div class="menu-grid" id="menu-grid">
+                <a href="pages/kesehatan_kulit.html" class="menu-item">
+                    <div class="menu-icon" style="background:#fce7f3">💬</div>
+                    <span>Chat Dokter</span>
+                </a>
+                <a href="pages/toko.html" class="menu-item">
+                    <div class="menu-icon" style="background:#dcfce7">💊</div>
+                    <span>Toko Obat</span>
+                </a>
+                <a href="pages/bmi.html" class="menu-item">
+                    <div class="menu-icon" style="background:#e0f2fe">📊</div>
+                    <span>Kalkulator BMI</span>
+                </a>
+                <a href="pages/kesehatan_kulit.html" class="menu-item">
+                    <div class="menu-icon" style="background:#fef3c7">🧴</div>
+                    <span>Kesehatan Kulit</span>
+                </a>
+                <a href="pages/riwayat.html" class="menu-item">
+                    <div class="menu-icon" style="background:#ede9fe">🕒</div>
+                    <span>Riwayat</span>
+                </a>
+                <a href="pages/pengaturan.html" class="menu-item">
+                    <div class="menu-icon" style="background:#f1f5f9">⚙️</div>
+                    <span>Pengaturan</span>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Dokter Rekomendasi</h2>
+            <div class="home-doctors">
+                <div class="home-doctor">
+                    <div class="home-doctor-photo">👨‍⚕️</div>
+                    <p class="hd-name">dr. Andini Putri</p>
+                    <p class="hd-spec">Dokter Kulit</p>
+                    <p class="hd-rate">★ 4.9</p>
+                </div>
+                <div class="home-doctor">
+                    <div class="home-doctor-photo">👨‍⚕️</div>
+                    <p class="hd-name">dr. Raka Pratama</p>
+                    <p class="hd-spec">Dokter Umum</p>
+                    <p class="hd-rate">★ 4.8</p>
+                </div>
+                <div class="home-doctor">
+                    <div class="home-doctor-photo">👨‍⚕️</div>
+                    <p class="hd-name">dr. Citra Lestari</p>
+                    <p class="hd-spec">Dokter Anak</p>
+                    <p class="hd-rate">★ 4.9</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active"><span class="nav-icon">🏠</span><span>Beranda</span></a>
+        <a href="pages/toko.html" class="nav-item"><span class="nav-icon">🛍️</span><span>Toko</span></a>
+        <a href="pages/kesehatan_kulit.html" class="nav-item-center">💬</a>
+        <a href="pages/riwayat.html" class="nav-item"><span class="nav-icon">🕒</span><span>Riwayat</span></a>
+        <a href="pages/pengaturan.html" class="nav-item"><span class="nav-icon">⚙️</span><span>Pengaturan</span></a>
+    </nav>
+    <script src="js/main.js"></script>
+</body>
+</html>
