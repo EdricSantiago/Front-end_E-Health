@@ -19,7 +19,8 @@
 .btn-back {
     text-decoration: none;
     color: #334155;
-    font-size: 22px;
+    font-size: 28px;
+    line-height: 0.8;
 }
 
 .bmi-header-title {
@@ -38,6 +39,10 @@
     margin-bottom: 32px;
 }
 
+.bmi-banner > div:nth-child(2) {
+    flex: 1;
+}
+
 .bmi-banner-text {
     font-size: 13.5px;
     color: #64748b;
@@ -53,6 +58,20 @@
     font-size: 12.5px;
     text-decoration: none;
     margin-top: 8px;
+}
+
+.menu-icon {
+    background-color: #e0f2fe;
+    margin-right: 4px;
+    padding: 0 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon i {
+    font-size: 28px;
 }
 
 .gender-selector {
@@ -86,6 +105,18 @@
     justify-content: center;
     margin-bottom: 10px;
     font-size: 36px;
+}
+
+#opt-male .gender-avatar i {
+    color: #3b82f6;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#opt-female .gender-avatar i {
+    color: #ec4899;
+    font-size: 48px;
+    font-weight: bold;
 }
 
 .gender-label {
@@ -171,6 +202,10 @@
     font-size: 14px;
     color: #475569;
     line-height: 1.6;
+}
+
+.faq-content p {
+    margin-bottom: 8px;
 }
 
 .faq-title {
