@@ -9,6 +9,15 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo">HaloDoc</div>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="kesehatan_kulit.html" class="active">Kesehatan Kulit</a>
+            <a href="toko.html">Toko</a>
+        </nav>
+    </header>
 
     <h1 class="page-title">Kesehatan Kulit</h1>
 
@@ -20,11 +29,11 @@
                 merawat kesehatan kulitmu.
             </p>
 
-            <button type="button">Konsultasi Sekarang</button>
+            <button type="button" onclick="goToSection('doctors')">Konsultasi Sekarang</button>
         </div>
     </section>
 
-    <section class="skin-services">
+    <section class="skin-services" id="services">
         <h2>Layanan Kesehatan Kulit</h2>
 
         <div class="service-list">
@@ -33,49 +42,49 @@
                 <div class="service-icon">🩺</div>
                 <h3>Konsultasi Dokter</h3>
                 <p>Konsultasikan masalah kulit dengan dokter.</p>
-                <button type="button">Konsultasi</button>
+                <button type="button" onclick="goToSection('doctors')">Konsultasi</button>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">🔍</div>
                 <h3>Cek Masalah Kulit</h3>
                 <p>Kenali masalah kulit yang sering terjadi.</p>
-                <button type="button">Lihat Informasi</button>
+                <button type="button" onclick="goToInformation()">Lihat Informasi</button>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">💊</div>
                 <h3>Produk Perawatan</h3>
                 <p>Temukan produk untuk membantu merawat kulit.</p>
-                <button type="button">Lihat Produk</button>
+                <button type="button" onclick="goToShop()">Lihat Produk</button>
             </div>
         </div>
     </section>
 
-    <section class="skin-problems">
+    <section class="skin-problems" id="problems">
         <h2>Masalah Kulit yang Sering Dialami</h2>
 
         <div class="problem-list">
 
-            <div class="problem-card">
+            <div class="problem-card" onclick="showProblem('Jerawat')">
                 <div class="problem-icon">😊</div>
                 <h3>Jerawat</h3>
                 <p>Informasi dan penanganan masalah jerawat.</p>
             </div>
 
-            <div class="problem-card">
+            <div class="problem-card" onclick="showProblem('Komedo')">
                 <div class="problem-icon">🔴</div>
                 <h3>Komedo</h3>
                 <p>Kenali penyebab dan cara merawat komedo.</p>
             </div>
 
-            <div class="problem-card">
+            <div class="problem-card" onclick="showProblem('Flek Hitam')">
                 <div class="problem-icon">✨</div>
                 <h3>Flek Hitam</h3>
                 <p>Informasi mengenai noda dan flek pada kulit.</p>
             </div>
 
-            <div class="problem-card">
+            <div class="problem-card" onclick="showProblem('Kulit Kering')">
                 <div class="problem-icon">💧</div>
                 <h3>Kulit Kering</h3>
                 <p>Tips menjaga kulit tetap lembap dan sehat.</p>
@@ -84,7 +93,7 @@
         </div>
     </section>
 
-    <section class="skin-doctors">
+    <section class="skin-doctors" id="doctors">
         <h2>Dokter Kulit</h2>
 
         <div class="doctor-list">
@@ -97,7 +106,7 @@
                     <p>Dokter Kulit</p>
                     <p class="doctor-rating">⭐ 4.9</p>
 
-                    <button type="button">Chat</button>
+                    <button type="button" onclick="openChat('dr. Andini Putri')">Konsultasi</button>
                 </div>
             </div>
 
@@ -108,8 +117,8 @@
                     <h3>dr. Raka Pratama</h3>
                     <p>Dokter Kulit</p>
                     <p class="doctor-rating">⭐ 4.8</p>
-
-                    <button type="button">Chat</button>
+                    
+                    <button type="button" onclick="openChat('dr. Raka Pratama')">Konsultasi</button>
                 </div>
             </div>
 
@@ -120,13 +129,13 @@
                     <h3>dr. Citra Lestari</h3>
                     <p>Dokter Kulit</p>
                     <p class="doctor-rating">⭐ 4.9</p>
-
-                    <button type="button">Chat</button>
+                    
+                    <button type="button" onclick="openChat('dr. Citra Lestari')">Konsultasi</button>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <script src="../js/kesehatan_kulit.js"></script>
 </body>
 </html>

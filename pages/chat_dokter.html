@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultasi</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">HeiDoc</div>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+            <a href="toko.html">Toko</a>
+        </nav>
+    </header>
+
+    <main class="chat-page">
+
+        <div class="chat-header">
+            <a href="kesehatan_kulit.html">←</a>
+
+            <div>
+                <h1 id="doctorName"></h1>
+                <p id="doctorSpecialist"></p>
+            </div>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <div class="doctor-message">
+                Halo, ada yang bisa saya bantu?
+            </div>
+        </div>
+
+        <form class="chat-form" id="chatForm">
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Ketik pesan..."
+            >
+
+            <button type="submit">Kirim</button>
+        </form>
+
+    </main>
+
+    <script src="../js/chat_dokter.js"></script>
+
+</body>
+</html>
