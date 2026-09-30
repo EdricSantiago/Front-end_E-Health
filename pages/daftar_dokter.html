@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Dokter - HaloDoc</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">HaloDoc</div>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+            <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
+            <a href="daftar_dokter.html" class="active">Dokter</a>
+            <a href="toko.html">Toko</a>
+        </nav>
+    </header>
+
+    <h1 class="dokter-title">Daftar Dokter</h1>
+
+    <section class="dokter-filter">
+        <input type="text" id="cari-dokter" placeholder="Cari nama dokter...">
+
+        <select id="filter-spesialis">
+            <option value="">Semua Spesialis</option>
+            <option value="Dokter Kulit">Dokter Kulit</option>
+            <option value="Dokter Hewan">Dokter Hewan</option>
+        </select>
+    </section>
+
+    <section class="dl-list" id="dl-list"></section>
+
+    <p class="dl-kosong" id="dl-kosong">Dokter tidak ditemukan.</p>
+
+    <script src="../js/data/dokter.js"></script>
+    <script src="../js/daftar_dokter.js"></script>
+</body>
+</html>

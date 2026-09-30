@@ -1,0 +1,118 @@
+.dokter-title {
+    max-width: 1100px;
+    margin: 24px auto 0;
+    padding: 0 24px;
+    font-size: 24px;
+    color: #1f2937;
+}
+
+.dokter-filter {
+    max-width: 1100px;
+    margin: 16px auto;
+    padding: 0 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.dokter-filter input,
+.dokter-filter select {
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.dokter-filter input {
+    flex: 1;
+}
+
+.dl-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.dl-card {
+    display: flex;
+    gap: 16px;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.dl-foto {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 11px;
+    text-align: center;
+}
+
+.dl-info {
+    flex: 1;
+}
+
+.dl-info h3 {
+    font-size: 15px;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.dl-info p {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.dl-info .dl-rating {
+    color: #f59e0b;
+}
+
+.dl-tombol {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.dl-tombol button {
+    background-color: #2f80ed;
+    color: white;
+    border: 1px solid #2f80ed;
+    border-radius: 7px;
+    padding: 7px 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dl-tombol button.dl-outline {
+    background-color: white;
+    color: #2f80ed;
+}
+
+.dl-kosong {
+    display: none;
+    text-align: center;
+    color: #6b7280;
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .dl-list {
+        grid-template-columns: 1fr;
+    }
+
+    .dokter-filter {
+        flex-direction: column;
+    }
+}
