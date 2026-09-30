@@ -58,3 +58,11 @@ document.addEventListener('DOMContentLoaded', function () {
         resultBox.style.display = 'block';
     });
 });
+
+function goBack() {
+    if (document.referrer && document.referrer.includes(window.location.host)) {
+        window.history.back();
+    } else {
+        window.location.href = 'layanan.html';
+    }
+}
