@@ -157,6 +157,10 @@
     background-color: #f3e8ff; 
 }
 
+.bg-green {
+    background-color: #dcfce7;
+}
+
 .icon-sky { 
     color: #0284c7; 
 }
@@ -175,6 +179,10 @@
 
 .icon-purple { 
     color: #9333ea; 
+}
+
+.icon-green {
+    color: #16a34a;
 }
 
 @media (min-width: 768px) {
