@@ -56,6 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
         resultValue.textContent = bmi;
         resultStatus.textContent = status;
         resultBox.style.display = 'block';
+
+        var tanggal = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+        tambahRiwayat({
+            type: 'bmi',
+            title: 'Hasil BMI: ' + bmi,
+            desc: status + ' - ' + tanggal,
+            status: status.includes('Normal') ? 'Normal' : 'Perlu Perhatian'
+        });
     });
 });
 
