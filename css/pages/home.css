@@ -1,5 +1,5 @@
 :root {
-    --primary: #ED2A5C;
+    --primary: #ed2a5c;
     --primary-hover: #d01e4c;
     --brand-blue: #2f80ed;
     --brand-blue-hover: #1b6cd7;
@@ -69,7 +69,9 @@ body {
     font-weight: 600;
     padding: 8px 20px;
     border-radius: 8px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .hd-login-btn:hover {
@@ -142,7 +144,10 @@ body {
     font-weight: 700;
     padding: 12px 24px;
     border-radius: 8px;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .hd-btn-primary:hover {
@@ -161,7 +166,9 @@ body {
     font-weight: 700;
     padding: 12px 24px;
     border-radius: 8px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .hd-btn-outline:hover {
@@ -191,7 +198,9 @@ body {
     align-items: center;
     gap: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .hd-search-bar:focus-within {
@@ -346,7 +355,10 @@ body {
     gap: 10px;
     text-decoration: none;
     color: var(--text-dark);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
@@ -393,7 +405,9 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -430,14 +444,19 @@ body {
 }
 
 .hd-doc-avatar {
-    width: 64px;
-    height: 64px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
-    margin-top: 8px;
-    margin-bottom: 12px;
+    background: #dfe5e7;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.hd-doc-avatar i {
+    font-size: 32px;
+    color: #ffffff;
 }
 
 .hd-doc-card h3 {
@@ -519,7 +538,9 @@ body {
     flex-direction: column;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
 }
 
@@ -529,10 +550,36 @@ body {
 }
 
 .hd-article-img {
-    height: 120px;
+    width: 100%;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hd-article-img i {
+    font-size: 44px;
+}
+
+.hd-art-pink {
+    background: #fde8ef;
+}
+.hd-art-pink i {
+    color: #d6075b;
+}
+
+.hd-art-green {
+    background: #e3f6ea;
+}
+.hd-art-green i {
+    color: #1f9d55;
+}
+
+.hd-art-blue {
+    background: #e4f0fb;
+}
+.hd-art-blue i {
+    color: #2b7bd6;
 }
 
 .hd-article-body {
