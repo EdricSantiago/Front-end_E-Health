@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Riwayat - HeiDoc</title>
+        <link rel="stylesheet" href="../css/main.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <div class="app">
+            <div class="page-header">
+                <a href="../index.html" class="btn-back">←</a>
+                <h1>Riwayat</h1>
+            </div>
+
+            <div class="tabs">
+                <button type="button" class="tab active" data-filter="semua">Semua</button>
+                <button type="button" class="tab" data-filter="konsultasi">Konsultasi</button>
+                <button type="button" class="tab" data-filter="pesanan">Pesanan</button>
+                <button type="button" class="tab" data-filter="bmi">BMI</button>
+            </div>
+
+            <div class="history-list" id="history-list"></div>
+            <p class="history-empty" id="history-empty" hidden>Belum ada riwayat.</p>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="../index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span>Beranda</span>
+            </a>
+            <a href="toko.html" class="nav-item">
+                <span class="nav-icon">🛍️</span>
+                <span>Toko</span>
+            </a>
+            <a href="kesehatan_kulit.html" class="nav-item-center">💬</a>
+            <a href="riwayat.html" class="nav-item active">
+                <span class="nav-icon">🕒</span>
+                <span>Riwayat</span>
+            </a>
+            <a href="pengaturan.html" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>Pengaturan</span>
+            </a>
+        </nav>
+
+        <script src="../js/riwayat-helper.js"></script>
+        <script src="../js/data/riwayat.js"></script>
+        <script src="../js/riwayat.js"></script>
+    </body>
+</html>

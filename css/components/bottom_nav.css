@@ -48,7 +48,6 @@
     box-shadow: 0 4px 12px rgba(237, 42, 92, 0.35);
 }
 
-/* Penyesuaian Tampilan Desktop & Tablet */
 @media (min-width: 768px) {
     .bottom-nav {
         max-width: 600px;
