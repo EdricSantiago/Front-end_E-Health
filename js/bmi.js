@@ -74,7 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
             sessionStorage.setItem('bmi_origin', 'profile.html');
         } else if (ref.indexOf('layanan.html') !== -1) {
             sessionStorage.setItem('bmi_origin', 'layanan.html');
-        } else if (ref.indexOf('index.html') !== -1) {
+        } else if (ref.indexOf('index.html') !== -1 || ref.endsWith('/pages/') === false && ref === '') {
+            sessionStorage.setItem('bmi_origin', '../index.html');
+        } else {
             sessionStorage.setItem('bmi_origin', '../index.html');
         }
     }
@@ -85,6 +87,6 @@ function goBack() {
     if (origin) {
         window.location.href = origin;
     } else {
-        window.location.href = 'layanan.html';
+        window.location.href = '../index.html';
     }
 }
