@@ -1,52 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Riwayat - HeiDoc</title>
-        <link rel="stylesheet" href="../css/main.css" />
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    </head>
-    <body>
-        <div class="app">
-            <div class="page-header">
-                <a href="../index.html" class="btn-back">←</a>
-                <h1>Riwayat</h1>
-            </div>
-
-            <div class="tabs">
-                <button type="button" class="tab active" data-filter="semua">Semua</button>
-                <button type="button" class="tab" data-filter="konsultasi">Konsultasi</button>
-                <button type="button" class="tab" data-filter="pesanan">Pesanan</button>
-                <button type="button" class="tab" data-filter="bmi">BMI</button>
-            </div>
-
-            <div class="history-list" id="history-list"></div>
-            <p class="history-empty" id="history-empty" hidden>Belum ada riwayat.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat - HeiDoc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <main class="hd-main">
+        <div class="riwayat-header">
+            <a href="../index.html" class="btn-back">←</a>
+            <h1>Riwayat</h1>
         </div>
 
-        <nav class="bottom-nav">
-            <a href="../index.html" class="nav-item">
-                <span class="nav-icon">🏠</span>
-                <span>Beranda</span>
-            </a>
-            <a href="toko.html" class="nav-item">
-                <span class="nav-icon">🛍️</span>
-                <span>Toko</span>
-            </a>
-            <a href="kesehatan_kulit.html" class="nav-item-center">💬</a>
-            <a href="riwayat.html" class="nav-item active">
-                <span class="nav-icon">🕒</span>
-                <span>Riwayat</span>
-            </a>
-            <a href="pengaturan.html" class="nav-item">
-                <span class="nav-icon">⚙️</span>
-                <span>Pengaturan</span>
-            </a>
-        </nav>
+        <div class="riwayat-tabs">
+            <button type="button" class="tab-chip active" data-filter="semua">Semua</button>
+            <button type="button" class="tab-chip" data-filter="konsultasi">Konsultasi</button>
+            <button type="button" class="tab-chip" data-filter="pesanan">Pesanan</button>
+            <button type="button" class="tab-chip" data-filter="bmi">BMI</button>
+        </div>
 
-        <script src="../js/riwayat-helper.js"></script>
-        <script src="../js/data/riwayat.js"></script>
-        <script src="../js/riwayat.js"></script>
-    </body>
+        <div class="riwayat-list" id="riwayat-list"></div>
+        <p class="riwayat-kosong" id="riwayat-kosong" hidden>Belum ada riwayat.</p>
+    </main>
+
+    <script src="../js/riwayat-helper.js"></script>
+    <script src="../js/data/riwayat.js"></script>
+    <script src="../js/riwayat.js"></script>
+    <script src="../js/components/bottom_nav.js"></script>
+</body>
 </html>

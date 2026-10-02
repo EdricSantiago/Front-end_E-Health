@@ -1,198 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeiDoc - Solusi Kesehatan Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/pages/home.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HeiDoc - Solusi Kesehatan Digital</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/pages/home.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <header class="hd-topnav">
+            <div class="hd-topnav-inner">
+                <a href="index.html" class="hd-logo">HeiDoc</a>
+                <nav class="hd-nav-links">
+                    <a href="index.html" class="active">Beranda</a>
+                    <a href="pages/kesehatan_kulit.html">Kesehatan Kulit</a>
+                    <a href="pages/kesehatan_hewan.html">Kesehatan Hewan</a>
+                    <a href="pages/toko.html">Toko</a>
+                    <a href="pages/bmi.html">BMI</a>
+                </nav>
+                <a href="pages/login.html" class="hd-login-btn">Masuk</a>
+            </div>
+        </header>
 
-    <header class="hd-topnav">
-        <div class="hd-topnav-inner">
-            <a href="index.html" class="hd-logo">HeiDoc</a>
-            <nav class="hd-nav-links">
-                <a href="index.html" class="active">Beranda</a>
-                <a href="pages/kesehatan_kulit.html">Kesehatan Kulit</a>
-                <a href="pages/kesehatan_hewan.html">Kesehatan Hewan</a>
-                <a href="pages/toko.html">Toko</a>
-                <a href="pages/bmi.html">BMI</a>
-            </nav>
-            <a href="pages/login.html" class="hd-login-btn">Masuk</a>
-        </div>
-    </header>
-
-    <main class="hd-main">
-
-        <section class="hd-hero">
-            <div class="hd-hero-inner">
-                <div class="hd-hero-text">
-                    <p class="hd-hero-greeting" id="hd-greeting">Selamat Datang</p>
-                    <h1>Kesehatan Dimulai dari Sini</h1>
-                    <p class="hd-hero-sub">Konsultasi dokter, beli obat, dan cek kesehatan dalam satu aplikasi.</p>
-                    <div class="hd-hero-actions">
-                        <a href="pages/kesehatan_kulit.html" class="hd-btn-primary">Chat Dokter</a>
-                        <a href="pages/toko.html" class="hd-btn-outline">Beli Obat</a>
+        <main class="hd-main">
+            <section class="hd-hero">
+                <div class="hd-hero-inner">
+                    <div class="hd-hero-text">
+                        <p class="hd-hero-greeting" id="hd-greeting">Selamat Datang</p>
+                        <h1>Kesehatan Dimulai dari Sini</h1>
+                        <p class="hd-hero-sub">Konsultasi dokter, beli obat, dan cek kesehatan dalam satu aplikasi.</p>
+                        <div class="hd-hero-actions">
+                            <a href="pages/kesehatan_kulit.html" class="hd-btn-primary">Chat Dokter</a>
+                            <a href="pages/toko.html" class="hd-btn-outline">Beli Obat</a>
+                        </div>
+                    </div>
+                    <div class="hd-hero-visual">
+                        <img src="assets/images/hero.jpg" alt="Ilustrasi kesehatan" />
                     </div>
                 </div>
-                <div class="hd-hero-visual">
-                    <img src="assets/images/hero.jpg" alt="Ilustrasi kesehatan">
+            </section>
+
+            <section class="hd-search-section">
+                <div class="hd-search-bar">
+                    <input type="text" id="search-input" placeholder="Cari dokter, obat, atau layanan" />
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="hd-search-section">
-            <div class="hd-search-bar">
-                <input type="text" id="search-input" placeholder="Cari dokter, obat, atau layanan">
-            </div>
-        </section>
-
-        <section class="hd-banner-carousel">
-            <div class="hd-banner-track" id="banner-track">
-                <a href="pages/kesehatan_kulit.html" class="hd-banner-slide active">
-                    <img src="assets/images/banner1.jpg" alt="Promo chat dokter">
-                </a>
-                <a href="pages/toko.html" class="hd-banner-slide">
-                    <img src="assets/images/banner2.jpg" alt="Promo toko obat">
-                </a>
-                <a href="pages/bmi.html" class="hd-banner-slide">
-                    <img src="assets/images/banner3.jpg" alt="Promo cek BMI">
-                </a>
-            </div>
-            <div class="hd-banner-dots" id="banner-dots">
-                <span class="hd-dot active" data-index="0"></span>
-                <span class="hd-dot" data-index="1"></span>
-                <span class="hd-dot" data-index="2"></span>
-            </div>
-        </section>
-
-        <section class="hd-services">
-            <h2>Layanan Kesehatan</h2>
-            <div class="hd-service-grid" id="menu-grid">
-                <a href="pages/kesehatan_kulit.html" class="hd-svc">
-                    <img src="assets/images/icons/chat.png" alt="">
-                    <span>Chat Dokter</span>
-                </a>
-                <a href="pages/toko.html" class="hd-svc">
-                    <img src="assets/images/icons/obat.png" alt="">
-                    <span>Toko Obat</span>
-                </a>
-                <a href="pages/bmi.html" class="hd-svc">
-                    <img src="assets/images/icons/bmi.png" alt="">
-                    <span>Kalkulator BMI</span>
-                </a>
-                <a href="pages/kesehatan_kulit.html" class="hd-svc">
-                    <img src="assets/images/icons/kulit.png" alt="">
-                    <span>Kesehatan Kulit</span>
-                </a>
-                <a href="pages/kesehatan_hewan.html" class="hd-svc">
-                    <img src="assets/images/icons/hewan.png" alt="">
-                    <span>Hewan Peliharaan</span>
-                </a>
-                <a href="pages/informasi_kulit.html" class="hd-svc">
-                    <img src="assets/images/icons/info.png" alt="">
-                    <span>Info Kesehatan</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="hd-doctors">
-            <div class="hd-section-head">
-                <h2>Dokter Rekomendasi</h2>
-                <a href="pages/kesehatan_kulit.html" class="hd-see-all">Lihat Semua</a>
-            </div>
-            <div class="hd-doctor-list">
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status">● Online</span>
-                    <img src="assets/images/doctors/andini.jpg" alt="dr. Andini Putri" class="hd-doc-avatar">
-                    <h3>dr. Andini Putri</h3>
-                    <p class="hd-doc-spec">Dokter Kulit</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.9</span>
-                        <span class="hd-doc-exp">8 thn</span>
-                    </div>
-                    <a href="pages/chat_dokter.html?dokter=dr.%20Andini%20Putri&spesialis=Dokter%20Kulit" class="hd-doc-btn">Chat Dokter</a>
+            <section class="hd-banner-carousel">
+                <div class="hd-banner-track" id="banner-track">
+                    <a href="pages/kesehatan_kulit.html" class="hd-banner-slide active">
+                        <img src="assets/images/banner1.jpg" alt="Promo chat dokter" />
+                    </a>
+                    <a href="pages/toko.html" class="hd-banner-slide">
+                        <img src="assets/images/banner2.jpg" alt="Promo toko obat" />
+                    </a>
+                    <a href="pages/bmi.html" class="hd-banner-slide">
+                        <img src="assets/images/banner3.jpg" alt="Promo cek BMI" />
+                    </a>
                 </div>
-
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status">● Online</span>
-                    <img src="assets/images/doctors/raka.jpg" alt="dr. Raka Pratama" class="hd-doc-avatar">
-                    <h3>dr. Raka Pratama</h3>
-                    <p class="hd-doc-spec">Dokter Umum</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.8</span>
-                        <span class="hd-doc-exp">5 thn</span>
-                    </div>
-                    <a href="pages/chat_dokter.html?dokter=dr.%20Raka%20Pratama&spesialis=Dokter%20Umum" class="hd-doc-btn">Chat Dokter</a>
+                <div class="hd-banner-dots" id="banner-dots">
+                    <span class="hd-dot active" data-index="0"></span>
+                    <span class="hd-dot" data-index="1"></span>
+                    <span class="hd-dot" data-index="2"></span>
                 </div>
+            </section>
 
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status">● Online</span>
-                    <img src="assets/images/doctors/citra.jpg" alt="dr. Citra Lestari" class="hd-doc-avatar">
-                    <h3>dr. Citra Lestari</h3>
-                    <p class="hd-doc-spec">Dokter Anak</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.9</span>
-                        <span class="hd-doc-exp">10 thn</span>
-                    </div>
-                    <a href="pages/chat_dokter.html?dokter=dr.%20Citra%20Lestari&spesialis=Dokter%20Anak" class="hd-doc-btn">Chat Dokter</a>
+            <section class="hd-services">
+                <h2>Layanan Kesehatan</h2>
+                <a href="pages/layanan.html" class="hd-see-all">Lihat Semua</a>
+                <div class="hd-service-grid" id="menu-grid">
+                    <a href="pages/kesehatan_kulit.html" class="hd-svc">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span>Chat Dokter</span>
+                    </a>
+                    <a href="pages/toko.html" class="hd-svc">
+                        <i class="fa-solid fa-pills"></i>
+                        <span>Toko Obat</span>
+                    </a>
+                    <a href="pages/bmi.html" class="hd-svc">
+                        <i class="fa-solid fa-weight-scale"></i>
+                        <span>Kalkulator BMI</span>
+                    </a>
+                    <a href="pages/kesehatan_kulit.html" class="hd-svc">
+                        <i class="fa-solid fa-hand-dots"></i>
+                        <span>Kesehatan Kulit</span>
+                    </a>
+                    <a href="pages/kesehatan_hewan.html" class="hd-svc">
+                        <i class="fa-solid fa-paw"></i>
+                        <span>Hewan Peliharaan</span>
+                    </a>
+                    <a href="pages/informasi_kulit.html" class="hd-svc">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Info Kesehatan</span>
+                    </a>
                 </div>
+            </section>
 
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status hd-offline">● Sibuk</span>
-                    <img src="assets/images/doctors/budi.jpg" alt="dr. Budi Santoso" class="hd-doc-avatar">
-                    <h3>dr. Budi Santoso</h3>
-                    <p class="hd-doc-spec">Dokter Gigi</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.7</span>
-                        <span class="hd-doc-exp">12 thn</span>
-                    </div>
-                    <span class="hd-doc-btn hd-btn-off">Tidak Tersedia</span>
+            <section class="hd-doctors">
+                <div class="hd-section-head">
+                    <h2>Dokter Rekomendasi</h2>
+                    <a href="pages/kesehatan_kulit.html" class="hd-see-all">Lihat Semua</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="hd-articles">
-            <h2>Artikel Kesehatan</h2>
-            <div class="hd-article-grid">
-                <a href="pages/informasi_kulit.html" class="hd-article">
-                    <img src="assets/images/articles/artikel1.jpg" alt="" class="hd-article-img">
-                    <div class="hd-article-body">
-                        <h3>5 Tips Menjaga Daya Tahan Tubuh</h3>
-                        <p>Pelajari cara menjaga imun tubuh agar tetap kuat setiap hari.</p>
-                        <span class="hd-article-meta">2 Okt 2026</span>
+                <div class="hd-doctor-list">
+                    <div class="hd-doc-card">
+                        <span class="hd-doc-status">● Online</span>
+                        <img src="assets/images/doctors/andini.jpg" alt="dr. Andini Putri" class="hd-doc-avatar" />
+                        <h3>dr. Andini Putri</h3>
+                        <p class="hd-doc-spec">Dokter Kulit</p>
+                        <div class="hd-doc-info">
+                            <span class="hd-doc-rating">★ 4.9</span>
+                            <span class="hd-doc-exp">8 thn</span>
+                        </div>
+                        <a
+                            href="pages/chat_dokter.html?dokter=dr.%20Andini%20Putri&spesialis=Dokter%20Kulit"
+                            class="hd-doc-btn"
+                            >Chat Dokter</a
+                        >
                     </div>
-                </a>
-                <a href="pages/toko.html" class="hd-article">
-                    <img src="assets/images/articles/artikel2.jpg" alt="" class="hd-article-img">
-                    <div class="hd-article-body">
-                        <h3>Panduan Memilih Vitamin yang Tepat</h3>
-                        <p>Kenali kebutuhan vitamin harianmu dan cara memilih suplemen.</p>
-                        <span class="hd-article-meta">1 Okt 2026</span>
+
+                    <div class="hd-doc-card">
+                        <span class="hd-doc-status">● Online</span>
+                        <img src="assets/images/doctors/raka.jpg" alt="dr. Raka Pratama" class="hd-doc-avatar" />
+                        <h3>dr. Raka Pratama</h3>
+                        <p class="hd-doc-spec">Dokter Umum</p>
+                        <div class="hd-doc-info">
+                            <span class="hd-doc-rating">★ 4.8</span>
+                            <span class="hd-doc-exp">5 thn</span>
+                        </div>
+                        <a
+                            href="pages/chat_dokter.html?dokter=dr.%20Raka%20Pratama&spesialis=Dokter%20Umum"
+                            class="hd-doc-btn"
+                            >Chat Dokter</a
+                        >
                     </div>
-                </a>
-                <a href="pages/bmi.html" class="hd-article">
-                    <img src="assets/images/articles/artikel3.jpg" alt="" class="hd-article-img">
-                    <div class="hd-article-body">
-                        <h3>Olahraga Ringan untuk Kesehatan</h3>
-                        <p>Aktivitas fisik sederhana yang bisa meningkatkan mood.</p>
-                        <span class="hd-article-meta">30 Sep 2026</span>
+
+                    <div class="hd-doc-card">
+                        <span class="hd-doc-status">● Online</span>
+                        <img src="assets/images/doctors/citra.jpg" alt="dr. Citra Lestari" class="hd-doc-avatar" />
+                        <h3>dr. Citra Lestari</h3>
+                        <p class="hd-doc-spec">Dokter Anak</p>
+                        <div class="hd-doc-info">
+                            <span class="hd-doc-rating">★ 4.9</span>
+                            <span class="hd-doc-exp">10 thn</span>
+                        </div>
+                        <a
+                            href="pages/chat_dokter.html?dokter=dr.%20Citra%20Lestari&spesialis=Dokter%20Anak"
+                            class="hd-doc-btn"
+                            >Chat Dokter</a
+                        >
                     </div>
-                </a>
-            </div>
-        </section>
 
-        <div class="hd-spacer"></div>
-    </main>
+                    <div class="hd-doc-card">
+                        <span class="hd-doc-status hd-offline">● Sibuk</span>
+                        <img src="assets/images/doctors/budi.jpg" alt="dr. Budi Santoso" class="hd-doc-avatar" />
+                        <h3>dr. Budi Santoso</h3>
+                        <p class="hd-doc-spec">Dokter Gigi</p>
+                        <div class="hd-doc-info">
+                            <span class="hd-doc-rating">★ 4.7</span>
+                            <span class="hd-doc-exp">12 thn</span>
+                        </div>
+                        <span class="hd-doc-btn hd-btn-off">Tidak Tersedia</span>
+                    </div>
+                </div>
+            </section>
 
-    <div id="bottom-nav-container"></div>
+            <section class="hd-articles">
+                <h2>Artikel Kesehatan</h2>
+                <div class="hd-article-grid">
+                    <a href="pages/informasi_kulit.html" class="hd-article">
+                        <img src="assets/images/articles/artikel1.jpg" alt="" class="hd-article-img" />
+                        <div class="hd-article-body">
+                            <h3>5 Tips Menjaga Daya Tahan Tubuh</h3>
+                            <p>Pelajari cara menjaga imun tubuh agar tetap kuat setiap hari.</p>
+                            <span class="hd-article-meta">2 Okt 2026</span>
+                        </div>
+                    </a>
+                    <a href="pages/toko.html" class="hd-article">
+                        <img src="assets/images/articles/artikel2.jpg" alt="" class="hd-article-img" />
+                        <div class="hd-article-body">
+                            <h3>Panduan Memilih Vitamin yang Tepat</h3>
+                            <p>Kenali kebutuhan vitamin harianmu dan cara memilih suplemen.</p>
+                            <span class="hd-article-meta">1 Okt 2026</span>
+                        </div>
+                    </a>
+                    <a href="pages/bmi.html" class="hd-article">
+                        <img src="assets/images/articles/artikel3.jpg" alt="" class="hd-article-img" />
+                        <div class="hd-article-body">
+                            <h3>Olahraga Ringan untuk Kesehatan</h3>
+                            <p>Aktivitas fisik sederhana yang bisa meningkatkan mood.</p>
+                            <span class="hd-article-meta">30 Sep 2026</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
 
-    <script src="js/main.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/components/bottom_nav.js"></script>
-</body>
+            <div class="hd-spacer"></div>
+        </main>
+
+        <div id="bottom-nav-container"></div>
+
+        <script src="js/main.js"></script>
+        <script src="js/home.js"></script>
+        <script src="js/components/bottom_nav.js"></script>
+    </body>
 </html>

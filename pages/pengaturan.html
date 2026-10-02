@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pengaturan - HeiDoc</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    </head>
+    <body>
+        <div class="settings-container">
+            <div class="settings-header">
+                <h1>Pengaturan</h1>
+            </div>
+
+            <div class="settings-list">
+                <a href="bmi_faq.html" class="settings-row">
+                    <div class="settings-icon"><i class="fa-solid fa-circle-question"></i></div>
+                    <div class="settings-label">Bantuan</div>
+                    <i class="fa-solid fa-chevron-right settings-chevron"></i>
+                </a>
+
+                <div class="settings-row btn-open-lang">
+                    <div class="settings-icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="settings-label">Bahasa</div>
+                    <div class="lang-pill">
+                        <span class="lang-option" data-lang="id" id="lang-opt-id">ID</span>
+                        <span class="lang-option" data-lang="en" id="lang-opt-en">EN</span>
+                    </div>
+                </div>
+
+                <label class="settings-row">
+                    <div class="settings-icon"><i class="fa-solid fa-bell"></i></div>
+                    <div class="settings-label">Notifikasi</div>
+                    <input type="checkbox" class="switch" id="set-notif" />
+                </label>
+
+                <label class="settings-row">
+                    <div class="settings-icon"><i class="fa-solid fa-volume-high"></i></div>
+                    <div class="settings-label">Suara</div>
+                    <input type="checkbox" class="switch" id="set-sound" />
+                </label>
+
+                <label class="settings-row">
+                    <div class="settings-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div class="settings-label">Simpan Riwayat</div>
+                    <input type="checkbox" class="switch" id="set-history" />
+                </label>
+            </div>
+
+            <div class="settings-version">Versi aplikasi 1.0.0</div>
+
+            <div class="logout-wrapper">
+                <button type="button" class="btn-logout" id="btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Keluar
+                </button>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="lang-modal" style="display:none">
+            <input type="hidden" id="input-lang">
+        </div>
+
+        <script src="../js/pengaturan.js"></script>
+        <script src="../js/components/bottom_nav.js"></script>
+    </body>
+</html>

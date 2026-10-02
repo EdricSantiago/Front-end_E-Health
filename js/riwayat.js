@@ -1,12 +1,13 @@
-$(function () {
+document.addEventListener('DOMContentLoaded', function () {
     var icon = {
-        konsultasi: 'assets/images/icons/chat.png',
-        pesanan: 'assets/images/icons/obat.png',
-        bmi: 'assets/images/icons/bmi.png'
+        konsultasi: '💬',
+        pesanan: '🛍️',
+        bmi: '📊'
     };
 
     function ambilSemuaRiwayat() {
-        var tersimpan = JSON.parse(localStorage.getItem('riwayat_user') || '[]');
+        var tersimpan = [];
+        try { tersimpan = JSON.parse(localStorage.getItem('riwayat_user')) || []; } catch (e) {}
         return tersimpan.concat(riwayatDummy);
     }
 
@@ -16,27 +17,32 @@ $(function () {
             return d.type === filter;
         });
 
-        $('#history-list').empty();
+        var list = document.getElementById('riwayat-list');
+        list.innerHTML = '';
 
         data.forEach(function (d) {
-            var html = '<div class="history-item">' +
-                '<img src="' + icon[d.type] + '" alt="">' +
-                '<div class="history-body">' +
-                '<p class="history-title">' + d.title + '</p>' +
-                '<p class="history-desc">' + d.desc + '</p>' +
+            var item = document.createElement('div');
+            item.className = 'riwayat-item';
+            item.innerHTML =
+                '<div class="riwayat-icon">' + icon[d.type] + '</div>' +
+                '<div class="riwayat-body">' +
+                '<p class="riwayat-title">' + d.title + '</p>' +
+                '<p class="riwayat-desc">' + d.desc + '</p>' +
                 '</div>' +
-                '<span class="history-status">' + d.status + '</span>' +
-                '</div>';
-            $('#history-list').append(html);
+                '<span class="riwayat-status">' + d.status + '</span>';
+            list.appendChild(item);
         });
 
-        $('#history-empty').prop('hidden', data.length > 0);
+        document.getElementById('riwayat-kosong').hidden = data.length > 0;
     }
 
-    $('.tab').on('click', function () {
-        $('.tab').removeClass('active');
-        $(this).addClass('active');
-        tampilkan($(this).data('filter'));
+    var tabs = document.querySelectorAll('.tab-chip');
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            tabs.forEach(function (t) { t.classList.remove('active'); });
+            tab.classList.add('active');
+            tampilkan(tab.getAttribute('data-filter'));
+        });
     });
 
     tampilkan('semua');
