@@ -59,9 +59,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+(function () {
+    var ref = document.referrer;
+    if (ref.indexOf('bmi_faq.html') === -1) {
+        if (ref.indexOf('profile.html') !== -1) {
+            sessionStorage.setItem('bmi_origin', 'profile.html');
+        } else if (ref.indexOf('layanan.html') !== -1) {
+            sessionStorage.setItem('bmi_origin', 'layanan.html');
+        } else if (ref.indexOf('index.html') !== -1) {
+            sessionStorage.setItem('bmi_origin', '../index.html');
+        }
+    }
+})();
+
 function goBack() {
-    if (document.referrer && document.referrer.includes(window.location.host)) {
-        window.history.back();
+    var origin = sessionStorage.getItem('bmi_origin');
+    if (origin) {
+        window.location.href = origin;
     } else {
         window.location.href = 'layanan.html';
     }
