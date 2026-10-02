@@ -5,13 +5,16 @@
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .animal-logo {
     font-size: 22px;
-    font-weight: 700;
-    color: #2f80ed;
+    font-weight: 800;
+    color: var(--brand-blue);
 }
 
 .animal-nav {
@@ -20,21 +23,27 @@
 }
 
 .animal-nav a {
-    color: #6b7280;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .animal-nav a:hover,
 .animal-nav a.active {
-    color: #2f80ed;
+    color: var(--primary);
+    font-weight: 700;
 }
 
 .animal-hero {
     max-width: 1100px;
-    min-height: 400px;
-    margin: 0 auto;
-    padding: 60px 24px;
+    min-height: 360px;
+    margin: 20px auto 28px;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #fff1f2 0%, #ffffff 50%, #eff6ff 100%);
+    border: 1px solid #fecdd3;
+    border-radius: 16px;
 
     display: flex;
     align-items: center;
@@ -47,25 +56,32 @@
 .animal-hero-text h1 {
     font-size: 40px;
     line-height: 1.2;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 18px;
 }
 
 .animal-hero-text p {
     font-size: 16px;
     line-height: 1.6;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 25px;
 }
 
 .animal-hero-text a {
     display: inline-block;
-    background-color: #2f80ed;
+    background-color: var(--primary);
     color: #ffffff;
     text-decoration: none;
-    padding: 11px 20px;
+    padding: 12px 24px;
     border-radius: 8px;
     font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.animal-hero-text a:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
 .animal-services {
@@ -77,13 +93,13 @@
 
 .animal-services h2 {
     font-size: 28px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
 .animal-services-text {
     font-size: 15px;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 30px;
 }
 
@@ -94,11 +110,19 @@
 }
 
 .animal-service-card {
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 25px;
     text-align: left;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.animal-service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: #fecdd3;
 }
 
 .animal-service-icon {
@@ -108,23 +132,57 @@
 
 .animal-service-card h3 {
     font-size: 17px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
 .animal-service-card p {
     font-size: 14px;
-    color: #6b7280;
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 18px;
 }
 
 .animal-service-card button {
-    background-color: #2f80ed;
+    background-color: var(--primary);
     color: #ffffff;
     border: none;
     border-radius: 8px;
     padding: 10px 16px;
     font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.animal-service-card button:hover {
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+    .animal-header {
+        padding: 0 20px;
+    }
+
+    .animal-nav {
+        gap: 12px;
+    }
+
+    .animal-nav a {
+        font-size: 12px;
+    }
+
+    .animal-hero {
+        padding: 30px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .animal-hero-text h1 {
+        font-size: 28px;
+    }
+
+    .animal-service-list {
+        grid-template-columns: 1fr;
+    }
 }

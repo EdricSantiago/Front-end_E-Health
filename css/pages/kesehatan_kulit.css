@@ -1,8 +1,9 @@
 .skin-hero {
     max-width: 1100px;
     margin: 20px auto;
-    padding: 40px 24px;
-    background-color: #f5f9ff;
+    padding: 36px 40px;
+    background: linear-gradient(135deg, #fff1f2 0%, #ffffff 50%, #eff6ff 100%);
+    border: 1px solid #fecdd3;
     border-radius: 16px;
 }
 
@@ -12,24 +13,31 @@
 
 .skin-hero h2 {
     font-size: 28px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 10px;
 }
 
 .skin-hero p {
     font-size: 15px;
-    color: #6b7280;
+    color: var(--text-muted);
     line-height: 1.6;
     margin-bottom: 18px;
 }
 
 .skin-hero button {
-    background-color: #2f80ed;
+    background-color: var(--primary);
     color: white;
     border: none;
     border-radius: 8px;
     padding: 10px 18px;
+    font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.skin-hero button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
 .skin-services {
@@ -40,7 +48,7 @@
 
 .skin-services h2 {
     font-size: 22px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 18px;
 }
 
@@ -51,11 +59,19 @@
 }
 
 .service-card {
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: #fecdd3;
 }
 
 .service-icon {
@@ -65,24 +81,31 @@
 
 .service-card h3 {
     font-size: 15px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 8px;
 }
 
 .service-card p {
     font-size: 13px;
-    color: #6b7280;
+    color: var(--text-muted);
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
 .service-card button {
-    background-color: white;
-    color: #2f80ed;
-    border: 1px solid #2f80ed;
-    border-radius: 7px;
+    background-color: #ffffff;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+    border-radius: 8px;
     padding: 8px 14px;
+    font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-card button:hover {
+    background-color: #fff1f2;
+    transform: translateY(-1px);
 }
 
 .skin-problems {
@@ -93,7 +116,7 @@
 
 .skin-problems h2 {
     font-size: 22px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 18px;
 }
 
@@ -104,16 +127,20 @@
 }
 
 .problem-card {
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
     cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .problem-card:hover {
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: #fecdd3;
 }
 
 .problem-icon {
@@ -123,13 +150,13 @@
 
 .problem-card h3 {
     font-size: 15px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 8px;
 }
 
 .problem-card p {
     font-size: 13px;
-    color: #6b7280;
+    color: var(--text-muted);
     line-height: 1.5;
 }
 
@@ -141,7 +168,7 @@
 
 .skin-doctors h2 {
     font-size: 22px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 18px;
 }
 
@@ -154,10 +181,17 @@
 .doctor-card {
     display: flex;
     gap: 16px;
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .doctor-image {
@@ -180,29 +214,36 @@
 
 .doctor-info h3 {
     font-size: 15px;
-    color: #1f2937;
+    color: var(--text-dark);
     margin-bottom: 6px;
 }
 
 .doctor-info p {
     font-size: 12px;
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 6px;
 }
 
 .doctor-rating {
-    color: #f59e0b !important;
+    color: #b45309 !important;
+    font-weight: 700;
 }
 
 .doctor-info button {
     margin-top: 6px;
-    background-color: #2f80ed;
+    background-color: var(--primary);
     color: white;
     border: none;
     border-radius: 7px;
     padding: 7px 12px;
     font-size: 12px;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.doctor-info button:hover {
+    background-color: var(--primary-hover);
 }
 
 .header {
@@ -211,14 +252,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
     font-size: 22px;
-    font-weight: 700;
-    color: #2f80ed;
+    font-weight: 800;
+    color: var(--brand-blue);
 }
 
 .nav {
@@ -227,14 +271,17 @@
 }
 
 .nav a {
-    color: #6b7280;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .nav a:hover,
 .nav a.active {
-    color: #2f80ed;
+    color: var(--primary);
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
