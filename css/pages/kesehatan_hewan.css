@@ -121,6 +121,57 @@
     background-color: var(--primary-hover);
 }
 
+.animal-problems {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 24px 50px;
+    text-align: center;
+}
+
+.animal-problems h2 {
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.animal-problems-text {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.animal-problem-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.animal-problem-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 22px;
+    text-align: left;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.animal-problem-icon {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+.animal-problem-card h3 {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.animal-problem-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     .animal-hero {
         padding: 30px 20px;
@@ -134,5 +185,9 @@
 
     .animal-service-list {
         grid-template-columns: 1fr;
+    }
+
+    .animal-problem-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
