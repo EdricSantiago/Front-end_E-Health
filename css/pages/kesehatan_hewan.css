@@ -243,6 +243,137 @@
     background-color: var(--primary-hover);
 }
 
+.animal-chat {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.animal-chat h1 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.animal-chat > p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.animal-chat-box {
+    height: 400px;
+    padding: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.doctor-message,
+.user-message {
+    width: fit-content;
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.doctor-message {
+    background-color: #eff6ff;
+}
+
+.user-message {
+    background-color: var(--primary);
+    color: white;
+    margin-left: auto;
+}
+
+.animal-chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+.animal-chat-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.animal-chat-form button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.animal-info {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px 24px;
+}
+
+.animal-info h1 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.animal-info-text {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.animal-info-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.animal-info-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.animal-info-card h2 {
+    font-size: 19px;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+}
+
+.animal-info-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.animal-back {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 11px 20px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.animal-back:hover {
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+    .animal-info-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .animal-hero {
         padding: 30px 20px;
