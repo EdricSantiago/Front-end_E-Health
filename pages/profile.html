@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya - HeiDoc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header-banner">
+            <h1 class="profile-header-title">Profil Saya</h1>
+        </div>
+
+        <div class="profile-card-user">
+            <div class="profile-card-top">
+                <div>
+                    <h2 class="user-name" id="user-name-display">Dasha Tarann</h2>
+                    <div class="user-meta">
+                        <span id="user-gender-display">Perempuan</span>
+                        <span>|</span>
+                        <span id="user-age-display">26 Tahun</span>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="btn-ubah-outline btn-open-modal">Ubah</a>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-section-title">
+                <i class="fa-solid fa-heart icon-brand"></i>
+                <span>Tingkatkan Kesehatanmu</span>
+            </div>
+            <div class="menu-grid">
+                <a href="bmi.html" class="menu-card">
+                    <div class="menu-icon bg-amber"><i class="fa-solid fa-calculator icon-amber"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Kalkulator BMI</div>
+                        <div class="menu-subtitle">Cara mudah mengetahui BMI</div>
+                    </div>
+                    <div class="menu-arrow">&rsaquo;</div>
+                </a>
+
+                <a href="toko.html" class="menu-card">
+                    <div class="menu-icon bg-green"><i class="fa-solid fa-basket-shopping icon-green"></i></div>
+                    <div class="menu-content">
+                        <div class="menu-title">Toko Kesehatan</div>
+                        <div class="menu-subtitle">Apotek online dan produk kesehatan</div>
+                    </div>
+                    <div class="menu-arrow">&rsaquo;</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title">Ubah Profil</h3>
+                <button type="button" class="btn-close-modal" id="btn-modal-close">&times;</button>
+            </div>
+            <form id="form-edit-profile">
+                <div class="form-group">
+                    <label for="input-name" class="form-label">Nama Lengkap</label>
+                    <input type="text" id="input-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-gender" class="form-label">Jenis Kelamin</label>
+                    <select id="input-gender" class="form-control" required>
+                        <option value="Perempuan">Perempuan</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="input-age" class="form-label">Umur (Tahun)</label>
+                    <input type="number" id="input-age" class="form-control" min="1" max="120" required>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal-cancel" id="btn-modal-cancel">Batal</button>
+                    <button type="submit" class="btn-modal-save">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/profile.js"></script>
+    <script src="../js/components/bottom_nav.js"></script>
+</body>
+</html>

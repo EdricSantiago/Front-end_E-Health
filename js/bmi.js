@@ -56,5 +56,37 @@ document.addEventListener('DOMContentLoaded', function () {
         resultValue.textContent = bmi;
         resultStatus.textContent = status;
         resultBox.style.display = 'block';
+
+        var tanggal = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric' });
+        tambahRiwayat({
+            type: 'bmi',
+            title: 'Hasil BMI: ' + bmi,
+            desc: status + ' - ' + tanggal,
+            status: status.includes('Normal') ? 'Normal' : 'Perlu Perhatian'
+        });
     });
 });
+
+(function () {
+    var ref = document.referrer;
+    if (ref.indexOf('bmi_faq.html') === -1) {
+        if (ref.indexOf('profile.html') !== -1) {
+            sessionStorage.setItem('bmi_origin', 'profile.html');
+        } else if (ref.indexOf('layanan.html') !== -1) {
+            sessionStorage.setItem('bmi_origin', 'layanan.html');
+        } else if (ref.indexOf('index.html') !== -1 || ref.endsWith('/pages/') === false && ref === '') {
+            sessionStorage.setItem('bmi_origin', '../index.html');
+        } else {
+            sessionStorage.setItem('bmi_origin', '../index.html');
+        }
+    }
+})();
+
+function goBack() {
+    var origin = sessionStorage.getItem('bmi_origin');
+    if (origin) {
+        window.location.href = origin;
+    } else {
+        window.location.href = '../index.html';
+    }
+}

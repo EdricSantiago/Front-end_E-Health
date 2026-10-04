@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toko Kesehatan - HeiDoc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <header class="hd-topnav">
+        <div class="hd-topnav-inner">
+            <a href="../index.html" class="hd-logo">HeiDoc</a>
+            <nav class="hd-nav-links">
+                <a href="../index.html">Beranda</a>
+                <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+                <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
+                <a href="toko.html" class="active">Toko</a>
+                <a href="bmi.html">BMI</a>
+            </nav>
+            <a href="login.html" class="hd-login-btn">Masuk</a>
+        </div>
+    </header>
+
     <h1 class="page-title">Toko Kesehatan</h1>
 
+    <div class="category-filter">
+        <button type="button" class="category-btn active" data-category="semua">Semua</button>
+        <button type="button" class="category-btn" data-category="obat">Obat &amp; Perawatan</button>
+        <button type="button" class="category-btn" data-category="vitamin">Vitamin &amp; Suplemen</button>
+        <button type="button" class="category-btn" data-category="lainnya">Kesehatan Lainnya</button>
+    </div>
+
     <div class="product-list">
-        <div class="product-card">
+        <div class="product-card" data-category="obat">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Paracetamol 500mg</p>
@@ -24,7 +46,45 @@
             </div>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-category="obat">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Obat Batuk Cair</p>
+                <p class="product-subtitle">Botol</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp28.500</span>
+                </div>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="obat">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Counterpain Gel 25g</p>
+                <p class="product-subtitle">Tube</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp106.500</span>
+                    <span class="product-discount">10%</span>
+                </div>
+                <span class="product-old-price">Rp118.800</span>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="obat">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Antasida Tablet</p>
+                <p class="product-subtitle">Strip</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp8.000</span>
+                </div>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="vitamin">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Vitamin C 1000mg</p>
@@ -38,19 +98,7 @@
             </div>
         </div>
 
-        <div class="product-card">
-            <div class="product-image">Gambar Produk</div>
-            <div class="product-info">
-                <p class="product-name">Obat Batuk Cair</p>
-                <p class="product-subtitle">Botol</p>
-                <div class="product-price-row">
-                    <span class="product-price">Rp28.500</span>
-                </div>
-                <button type="button" class="btn-add">Tambah +</button>
-            </div>
-        </div>
-
-        <div class="product-card">
+        <div class="product-card" data-category="vitamin">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Vitamin D3 1000 IU</p>
@@ -63,6 +111,58 @@
                 <button type="button" class="btn-add">Tambah +</button>
             </div>
         </div>
+
+        <div class="product-card" data-category="vitamin">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Multivitamin Anak</p>
+                <p class="product-subtitle">Botol</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp52.000</span>
+                </div>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="lainnya">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Hand Sanitizer 100ml</p>
+                <p class="product-subtitle">Botol</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp15.000</span>
+                </div>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="lainnya">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Masker Medis (50pcs)</p>
+                <p class="product-subtitle">Box</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp35.000</span>
+                    <span class="product-discount">25%</span>
+                </div>
+                <span class="product-old-price">Rp46.700</span>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="lainnya">
+            <div class="product-image">Gambar Produk</div>
+            <div class="product-info">
+                <p class="product-name">Termometer Digital</p>
+                <p class="product-subtitle">Unit</p>
+                <div class="product-price-row">
+                    <span class="product-price">Rp65.000</span>
+                </div>
+                <button type="button" class="btn-add">Tambah +</button>
+            </div>
+        </div>
     </div>
+
+    <script src="../js/toko.js"></script>
 </body>
 </html>

@@ -6,26 +6,25 @@
 
     <title>Kesehatan Hewan</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
 
-    <header class="animal-header">
-
-        <div class="animal-logo">
-            HaloDoc
+    <header class="hd-topnav">
+        <div class="hd-topnav-inner">
+            <a href="../index.html" class="hd-logo">HeiDoc</a>
+            <nav class="hd-nav-links">
+                <a href="../index.html">Beranda</a>
+                <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+                <a href="kesehatan_hewan.html" class="active">Kesehatan Hewan</a>
+                <a href="diet_gizi.html">Diet & Gizi</a>
+                <a href="toko.html">Toko</a>
+                <a href="bmi.html">BMI</a>
+            </nav>
+            <a href="login.html" class="hd-login-btn">Masuk</a>
         </div>
-
-        <nav class="animal-nav">
-            <a href="../index.html">Home</a>
-            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
-            <a href="kesehatan_hewan.html" class="active">
-                Kesehatan Hewan
-            </a>
-            <a href="toko.html">Toko</a>
-        </nav>
-
     </header>
 
 
@@ -59,7 +58,7 @@
 
                     <p>Konsultasikan kondisi hewan kesayanganmu dengan dokter hewan.</p>
 
-                    <button type="button">Konsultasi</button>
+                    <button type="button" onclick="openAnimalChat()">Konsultasi</button>
                 </div>
 
 
@@ -70,7 +69,7 @@
 
                     <p>Kenali berbagai masalah kesehatan yang sering dialami hewan.</p>
 
-                    <button type="button">Lihat Informasi</button>
+                    <button type="button" onclick="openAnimalInfo()">Lihat Informasi</button>
                 </div>
 
 
@@ -80,11 +79,122 @@
                     <h3>Produk Hewan</h3>
 
                     <p>Temukan berbagai produk untuk membantu merawat hewan kesayanganmu.</p>
-                    <button type="button">Lihat Produk</button>
+                    <button type="button" onclick="openAnimalProduct()">Lihat Produk</button>
                 </div>
 
             </div>
 
+        </section>
+
+        <section class="animal-problems">
+
+            <h2>Masalah Kesehatan Hewan</h2>
+
+            <p class="animal-problems-text">
+                Kenali beberapa masalah kesehatan yang sering
+                dialami oleh hewan peliharaan.
+            </p>
+
+            <div class="animal-problem-list">
+
+                <div class="animal-problem-card">
+                    <div class="animal-problem-icon">🐾</div>
+
+                    <h3>Penyakit Kulit</h3>
+
+                    <p>
+                        Masalah seperti gatal, iritasi, atau kerontokan
+                        bulu pada hewan.
+                    </p>
+                </div>
+
+                <div class="animal-problem-card">
+                    <div class="animal-problem-icon">🍖</div>
+
+                    <h3>Gangguan Pencernaan</h3>
+
+                    <p>
+                        Gangguan yang dapat menyebabkan muntah,
+                        diare, atau perubahan nafsu makan.
+                    </p>
+                </div>
+
+
+                <div class="animal-problem-card">
+                    <div class="animal-problem-icon">👁️</div>
+
+                    <h3>Infeksi Mata</h3>
+
+                    <p>
+                        Kondisi seperti mata merah, berair,
+                        atau adanya kotoran pada mata.
+                    </p>
+                </div>
+
+
+                <div class="animal-problem-card">
+                    <div class="animal-problem-icon">🦷</div>
+
+                    <h3>Masalah Gigi</h3>
+
+                    <p>
+                        Masalah pada gigi dan mulut yang dapat
+                        memengaruhi kenyamanan hewan.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="animal-doctors">
+
+            <h2>Dokter Hewan</h2>
+
+            <p class="animal-doctors-text">
+                Konsultasikan kesehatan hewan kesayanganmu
+                dengan dokter hewan.
+            </p>
+
+            <div class="animal-doctor-list">
+
+                <div class="animal-doctor-card">
+                    <div class="animal-doctor-icon">👩‍⚕️</div>
+
+                    <h3>drh. Andi Pratama</h3>
+
+                    <p>Dokter Hewan</p>
+
+                    <span>⭐ 4.9</span>
+
+                    <button type="button" onclick="openAnimalChat('drh. Andi Pratama')">Konsultasi</button>
+                </div>
+
+                <div class="animal-doctor-card">
+                    <div class="animal-doctor-icon">👨‍⚕️</div>
+
+                    <h3>drh. Rina Putri</h3>
+
+                    <p>Dokter Hewan</p>
+
+                    <span>⭐ 4.8</span>
+
+                    <button type="button" onclick="openAnimalChat('drh. Rina Putri')">Konsultasi</button>
+                </div>
+
+                <div class="animal-doctor-card">
+                    <div class="animal-doctor-icon">👩‍⚕️</div>
+
+                    <h3>drh. Budi Santoso</h3>
+
+                    <p>Dokter Hewan</p>
+
+                    <span>⭐ 4.9</span>
+
+                    <button type="button" onclick="openAnimalChat('drh. Budi Santoso')">Konsultasi</button>
+
+                </div>
+            </div>
         </section>
 
 
