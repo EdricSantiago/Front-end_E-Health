@@ -1,5 +1,5 @@
 const dokterJadwal = cariDokter(ambilIdDariUrl());
-let hariDipilih = "";
+let tanggalDipilih = "";
 let jamDipilih = "";
 
 if (!dokterJadwal) {
@@ -14,20 +14,26 @@ function tampilkanJadwal() {
     const listEl = document.getElementById("jd-list");
     listEl.innerHTML = "";
 
-    Object.keys(dokterJadwal.jadwal).forEach(function (hari) {
+    // Tanggal nyata untuk 14 hari ke depan
+    const tanggalList = tanggalTersedia(dokterJadwal, 14);
+
+    tanggalList.forEach(function (item) {
         const baris = document.createElement("div");
         baris.className = "jd-hari";
 
         let jamHtml = "";
-        dokterJadwal.jadwal[hari].forEach(function (jam) {
-            jamHtml += '<button type="button" class="jd-jam" data-hari="' + hari + '" data-jam="' + jam + '">' + jam + "</button>";
+        item.jam.forEach(function (jam) {
+            const penuh = slotTerpakai(dokterJadwal.id, item.tanggal, jam);
+            jamHtml += '<button type="button" class="jd-jam' + (penuh ? " penuh" : "") + '"' +
+                ' data-tanggal="' + item.tanggal + '" data-jam="' + jam + '"' +
+                (penuh ? ' disabled title="Sudah dipesan"' : "") + ">" + jam + "</button>";
         });
 
-        baris.innerHTML = "<h3>" + hari + '</h3><div class="jd-jam-list">' + jamHtml + "</div>";
+        baris.innerHTML = "<h3>" + formatTanggal(item.tanggal) + '</h3><div class="jd-jam-list">' + jamHtml + "</div>";
         listEl.appendChild(baris);
     });
 
-    document.querySelectorAll(".jd-jam").forEach(function (tombol) {
+    document.querySelectorAll(".jd-jam:not(.penuh)").forEach(function (tombol) {
         tombol.addEventListener("click", function () {
             pilihJam(tombol);
         });
@@ -40,18 +46,18 @@ function pilihJam(tombol) {
     });
 
     tombol.classList.add("dipilih");
-    hariDipilih = tombol.dataset.hari;
+    tanggalDipilih = tombol.dataset.tanggal;
     jamDipilih = tombol.dataset.jam;
 
     document.getElementById("jd-pilihan").textContent =
-        "Jadwal dipilih: " + hariDipilih + ", pukul " + jamDipilih;
+        "Jadwal dipilih: " + formatTanggal(tanggalDipilih) + ", pukul " + jamDipilih;
+    document.getElementById("jd-pesan").disabled = false;
 }
 
 document.getElementById("jd-pesan").addEventListener("click", function () {
-    if (hariDipilih === "") {
-        alert("Pilih jadwal terlebih dahulu.");
-        return;
-    }
+    if (tanggalDipilih === "") return;
 
-    alert("Janji dengan " + dokterJadwal.nama + " berhasil dibuat pada hari " + hariDipilih + " pukul " + jamDipilih + ".");
+    window.location.href = "booking.html?id=" + dokterJadwal.id +
+        "&tanggal=" + tanggalDipilih +
+        "&jam=" + encodeURIComponent(jamDipilih);
 });

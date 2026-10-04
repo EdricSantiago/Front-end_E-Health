@@ -28,17 +28,20 @@
         <p class="jd-nama" id="jd-nama"></p>
 
         <section id="jd-isi">
+            <p class="jd-catatan">Pilih tanggal dan jam. Jam yang dicoret sudah dipesan pasien lain.</p>
+
             <div id="jd-list"></div>
 
             <div class="jd-pilihan" id="jd-pilihan">Belum ada jadwal yang dipilih.</div>
 
-            <button type="button" class="jd-pesan" id="jd-pesan">Buat Janji</button>
+            <button type="button" class="jd-pesan" id="jd-pesan" disabled>Lanjut ke Booking</button>
         </section>
 
         <p class="jd-tidak-ada" id="jd-tidak-ada">Data dokter tidak ditemukan.</p>
     </main>
 
     <script src="../js/data/dokter.js"></script>
+    <script src="../js/data/janji.js"></script>
     <script src="../js/jadwal_dokter.js"></script>
 </body>
 </html>
