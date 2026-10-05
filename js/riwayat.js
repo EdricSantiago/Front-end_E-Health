@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var icon = {
         konsultasi: '💬',
         pesanan: '🛍️',
-        bmi: '📊'
+        bmi: '📊',
+        asuransi: '🛡️'
     };
 
     function ambilSemuaRiwayat() {
