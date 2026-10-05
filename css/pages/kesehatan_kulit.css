@@ -195,17 +195,12 @@
 }
 
 .doctor-image {
+    display: block;
     width: 90px;
     height: 90px;
     flex-shrink: 0;
-    background-color: #f0f4f8;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #9ca3af;
-    font-size: 11px;
-    text-align: center;
+    object-fit: cover;
 }
 
 .doctor-info {
