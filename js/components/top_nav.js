@@ -8,6 +8,7 @@
         ['Beranda', root + 'index.html', ['index.html']],
         ['Kesehatan Kulit', pages + 'kesehatan_kulit.html', ['kesehatan_kulit.html', 'informasi_kulit.html']],
         ['Kesehatan Hewan', pages + 'kesehatan_hewan.html', ['kesehatan_hewan.html', 'informasi_hewan.html', 'chat_hewan.html']],
+        ['Dokter', pages + 'daftar_dokter.html', ['daftar_dokter.html', 'detail_dokter.html', 'jadwal_dokter.html', 'booking.html']],
         ['Toko', pages + 'toko.html', ['toko.html']],
         ['Asuransi', pages + 'asuransi.html', ['asuransi.html']],
         ['Diet & Gizi', pages + 'diet_gizi.html', ['diet_gizi.html', 'informasi_gizi.html', 'chat_gizi.html']],

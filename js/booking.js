@@ -76,6 +76,12 @@
             if (profil && profil.name) el("bk-nama").value = profil.name;
             if (profil && profil.age) el("bk-usia").value = profil.age;
         } catch (e) {}
+
+        // Kalau belum ada data profil, pakai username dari login
+        if (!el("bk-nama").value) {
+            var user = localStorage.getItem("heidoc_user");
+            if (user) el("bk-nama").value = user;
+        }
     }
 
     // ---------- validasi ----------

@@ -3,7 +3,7 @@ const messageInput = document.getElementById("messageInput");
 const chatBox = document.getElementById("chatBox");
 
 const urlParams = new URLSearchParams(window.location.search);
-const doctorName = urlParams.get("doctor");
+const doctorName = urlParams.get("doctor") || urlParams.get("dokter");
 
 document.getElementById("doctorName").textContent = doctorName;
 
