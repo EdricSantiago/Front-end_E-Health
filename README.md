@@ -1,3 +1,15 @@
+# HeiDoc — Front-end E-Health
+
+Aplikasi front-end bertema kesehatan (E-Health) yang dibangun menggunakan **HTML, CSS, dan JavaScript**, terinspirasi dari aplikasi kesehatan Halodoc.
+
+## Teknologi
+
+- HTML5
+- CSS (struktur folder modular: `base`, `layout`, `components`, `pages`)
+- JavaScript 
+
+## Progres Fitur (per halaman)
+
 ### 🔐 Login (`pages/login.html`)
 Halaman pertama aplikasi. Form login dengan username & password, fitur tampilkan/sembunyikan password, menyimpan sesi, dan mengarahkan ke beranda setelah berhasil masuk. Logika ada di `js/login.js`, guard halaman di `js/auth.js`.
 

@@ -5,34 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Konsultasi - HaloDoc</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/pages/booking.css">
     <script src="../js/auth.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">HaloDoc</div>
-
-        <nav class="nav">
-            <a href="../index.html">Home</a>
-            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
-            <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
-            <a href="daftar_dokter.html" class="active">Dokter</a>
-            <a href="toko.html">Toko</a>
-        </nav>
-    </header>
-
+    <script src="../js/components/top_nav.js"></script>
     <main class="bk-wrapper">
 
-        <!-- Kalau link tidak valid -->
         <section class="bk-kosong" id="bk-invalid" hidden>
             <h1>Jadwal tidak ditemukan</h1>
             <p>Link booking ini tidak lengkap atau jadwalnya sudah lewat. Pilih jadwal dokter lagi ya.</p>
             <a href="daftar_dokter.html" class="bk-tombol">Lihat daftar dokter</a>
         </section>
 
-        <!-- Form booking -->
         <section id="bk-form-view" hidden>
             <a href="#" class="bk-kembali" id="bk-ubah">← Ubah jadwal</a>
             <h1 class="bk-judul">Booking Konsultasi</h1>
