@@ -9,21 +9,7 @@
     <script src="../js/auth.js"></script>
 </head>
 <body>
-    <header class="hd-topnav">
-        <div class="hd-topnav-inner">
-            <a href="../index.html" class="hd-logo">HeiDoc</a>
-            <nav class="hd-nav-links">
-                <a href="../index.html">Beranda</a>
-                <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
-                <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
-                <a href="toko.html" class="active">Toko</a>
-                <a href="asuransi.html">Asuransi</a>
-                <a href="bmi.html">BMI</a>
-            </nav>
-            <a href="login.html" class="hd-login-btn" data-logout>Keluar</a>
-        </div>
-    </header>
-
+    <script src="../js/components/top_nav.js"></script>
     <h1 class="page-title">Toko Kesehatan</h1>
 
     <div class="category-filter">
@@ -34,7 +20,7 @@
     </div>
 
     <div class="product-list">
-        <div class="product-card" data-category="obat">
+        <div class="product-card" data-harga="12000" data-category="obat">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Paracetamol 500mg</p>
@@ -48,7 +34,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="obat">
+        <div class="product-card" data-harga="28500" data-category="obat">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Obat Batuk Cair</p>
@@ -60,7 +46,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="obat">
+        <div class="product-card" data-harga="106500" data-category="obat">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Counterpain Gel 25g</p>
@@ -74,7 +60,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="obat">
+        <div class="product-card" data-harga="8000" data-category="obat">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Antasida Tablet</p>
@@ -86,7 +72,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="vitamin">
+        <div class="product-card" data-harga="45000" data-category="vitamin">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Vitamin C 1000mg</p>
@@ -100,7 +86,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="vitamin">
+        <div class="product-card" data-harga="39000" data-category="vitamin">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Vitamin D3 1000 IU</p>
@@ -114,7 +100,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="vitamin">
+        <div class="product-card" data-harga="52000" data-category="vitamin">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Multivitamin Anak</p>
@@ -126,7 +112,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="lainnya">
+        <div class="product-card" data-harga="15000" data-category="lainnya">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Hand Sanitizer 100ml</p>
@@ -138,7 +124,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="lainnya">
+        <div class="product-card" data-harga="35000" data-category="lainnya">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Masker Medis (50pcs)</p>
@@ -152,7 +138,7 @@
             </div>
         </div>
 
-        <div class="product-card" data-category="lainnya">
+        <div class="product-card" data-harga="65000" data-category="lainnya">
             <div class="product-image">Gambar Produk</div>
             <div class="product-info">
                 <p class="product-name">Termometer Digital</p>
@@ -165,6 +151,39 @@
         </div>
     </div>
 
+    <button type="button" class="cart-fab" id="cart-open">
+        🛒 Keranjang <span class="cart-count" id="cart-count" hidden>0</span>
+    </button>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-panel" id="cart-panel">
+        <div class="cart-head">
+            <h2>Keranjang</h2>
+            <button type="button" class="cart-close" id="cart-close">✕</button>
+        </div>
+
+        <div id="cart-view">
+            <p class="cart-empty" id="cart-empty">Keranjang masih kosong.</p>
+            <ul class="cart-list" id="cart-list"></ul>
+            <div class="cart-foot" id="cart-foot">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cart-total">Rp0</strong>
+                </div>
+                <button type="button" class="cart-checkout" id="cart-checkout">Checkout</button>
+            </div>
+        </div>
+
+        <div class="cart-done" id="cart-done" hidden>
+            <div class="cart-done-icon">✓</div>
+            <h3>Pesanan Berhasil</h3>
+            <p>Kode pesanan <strong id="cart-kode"></strong></p>
+            <a href="riwayat.html" class="cart-checkout">Lihat Riwayat</a>
+            <button type="button" class="cart-link" id="cart-lanjut">Lanjut Belanja</button>
+        </div>
+    </aside>
+
+    <script src="../js/riwayat_helper.js"></script>
     <script src="../js/toko.js"></script>
 </body>
 </html>
