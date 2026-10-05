@@ -17,7 +17,6 @@
         return terpilih ? terpilih.value : "";
     }
 
-    // Pastikan link-nya masuk akal: dokter ada, tanggal valid & belum lewat, jam sesuai jadwal dokter
     function jadwalValid() {
         if (!dokterBooking || !/^\d{4}-\d{2}-\d{2}$/.test(tanggal)) return false;
 
@@ -57,7 +56,6 @@
         el("rc-total").textContent = formatRupiah(totalBiaya(metode));
     }
 
-    // ---------- isi awal ----------
     function isiRingkasan() {
         el("bk-avatar").textContent = inisial(dokterBooking.nama);
         el("bk-dokter").textContent = dokterBooking.nama;
@@ -69,7 +67,6 @@
         el("bk-pilih-lain").href = linkJadwal;
     }
 
-    // Ambil nama & usia dari halaman Profile kalau sudah pernah diisi
     function isiDariProfil() {
         try {
             var profil = JSON.parse(localStorage.getItem("profile_data"));
@@ -77,14 +74,12 @@
             if (profil && profil.age) el("bk-usia").value = profil.age;
         } catch (e) {}
 
-        // Kalau belum ada data profil, pakai username dari login
         if (!el("bk-nama").value) {
             var user = localStorage.getItem("heidoc_user");
             if (user) el("bk-nama").value = user;
         }
     }
 
-    // ---------- validasi ----------
     function setError(idInput, idErr, pesan) {
         el(idErr).textContent = pesan;
         if (idInput) el(idInput).classList.toggle("salah", pesan !== "");
@@ -104,7 +99,6 @@
         return ok;
     }
 
-    // ---------- submit ----------
     function kirimBooking(e) {
         e.preventDefault();
         if (!validasi()) {
@@ -113,7 +107,6 @@
             return;
         }
 
-        // Cek ulang: bisa jadi slot dipesan di tab lain saat form diisi
         if (slotTerpakai(dokterBooking.id, tanggal, jam)) {
             el("bk-slot-error").hidden = false;
             el("bk-slot-error").scrollIntoView({ behavior: "smooth", block: "center" });
@@ -137,7 +130,6 @@
             status: "Terjadwal"
         });
 
-        // Masuk ke halaman Riwayat (pakai helper punya teman satu tim)
         if (typeof tambahRiwayat === "function") {
             tambahRiwayat({
                 type: "konsultasi",
@@ -151,7 +143,6 @@
         tampilkanSukses();
     }
 
-    // ---------- halaman sukses ----------
     function tampilkanSukses() {
         var j = janjiAktif;
         el("sk-sub").textContent = "Simpan kode ini. Dokter akan menunggu pada jadwal yang kamu pilih.";
@@ -165,7 +156,6 @@
         tampilkan("bk-sukses-view");
     }
 
-    // ---------- simpan ke kalender (.ics) ----------
     function tulisIcs(j) {
         function stempel(iso, jamStr, tambahMenit) {
             var p = jamStr.split(":");
@@ -207,7 +197,6 @@
         URL.revokeObjectURL(url);
     }
 
-    // ---------- batalkan janji ----------
     function setInfo(teks) {
         el("sk-info").textContent = teks;
         el("sk-info").hidden = false;
@@ -231,7 +220,6 @@
         setInfo("Janji dibatalkan. Jadwal ini bisa dipesan lagi, dan status di Riwayat ikut berubah.");
     }
 
-    // ---------- mulai ----------
     if (!jadwalValid()) {
         tampilkan("bk-invalid");
         return;

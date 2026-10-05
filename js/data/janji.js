@@ -1,4 +1,3 @@
-// Penyimpanan & helper janji konsultasi (dipakai jadwal_dokter.js dan booking.js)
 var KUNCI_JANJI = "janji_dokter";
 var NAMA_HARI = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 var NAMA_BULAN = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Okt", "Nov", "Des"];
@@ -15,7 +14,6 @@ function simpanJanji(daftar) {
     localStorage.setItem(KUNCI_JANJI, JSON.stringify(daftar));
 }
 
-// true kalau slot dokter + tanggal + jam itu sudah dipesan (dan belum dibatalkan)
 function slotTerpakai(dokterId, tanggal, jam) {
     return ambilJanji().some(function (j) {
         return j.dokterId === Number(dokterId) &&
@@ -41,7 +39,6 @@ function tambahJanji(janji) {
     return janji;
 }
 
-// Tandai dibatalkan di data janji DAN di riwayat, supaya dua-duanya sinkron
 function batalkanJanji(kode) {
     var daftar = ambilJanji();
     daftar.forEach(function (j) {
@@ -58,7 +55,6 @@ function batalkanJanji(kode) {
     } catch (e) {}
 }
 
-// ---------- helper tanggal (pakai waktu lokal, bukan UTC) ----------
 function isoLokal(d) {
     var bulan = String(d.getMonth() + 1).padStart(2, "0");
     var hari = String(d.getDate()).padStart(2, "0");
@@ -75,7 +71,6 @@ function formatTanggal(iso) {
     return NAMA_HARI[d.getDay()] + ", " + d.getDate() + " " + NAMA_BULAN[d.getMonth()] + " " + d.getFullYear();
 }
 
-// Daftar tanggal nyata (mulai besok) yang dokternya praktik
 function tanggalTersedia(dokter, jumlahHari) {
     var hasil = [];
     for (var i = 1; i <= jumlahHari; i++) {

@@ -14,7 +14,6 @@ function tampilkanJadwal() {
     const listEl = document.getElementById("jd-list");
     listEl.innerHTML = "";
 
-    // Tanggal nyata untuk 14 hari ke depan
     const tanggalList = tanggalTersedia(dokterJadwal, 14);
 
     tanggalList.forEach(function (item) {
