@@ -10,9 +10,15 @@
     --border-color: #e2e8f0;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     background-color: var(--bg-page);
     color: var(--text-dark);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .hd-topnav {
@@ -330,7 +336,7 @@ body {
 
 .hd-service-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 16px;
 }
 

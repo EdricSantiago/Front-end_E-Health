@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asuransi - HeiDoc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/auth.js"></script>
+</head>
+<body>
+    <script src="../js/components/top_nav.js"></script>
+    <main>
+        <section class="as-hero">
+            <div class="as-hero-text">
+                <h1>Lindungi Kesehatanmu dan Keluarga</h1>
+                <p>Pilih paket asuransi kesehatan yang sesuai kebutuhan, dari konsultasi dokter sampai rawat inap.</p>
+                <a href="#paket">Lihat Paket</a>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2>Perlindungan untuk Kebutuhanmu</h2>
+            <p class="as-sub">Manfaat utama yang kamu dapatkan dari asuransi HeiDoc.</p>
+            <div class="as-grid">
+                <div class="as-info">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <h3>Rawat Jalan</h3>
+                    <p>Biaya konsultasi dokter, obat, dan pemeriksaan ditanggung sesuai limit paket.</p>
+                </div>
+                <div class="as-info">
+                    <i class="fa-solid fa-bed-pulse"></i>
+                    <h3>Rawat Inap</h3>
+                    <p>Biaya kamar dan tindakan medis di rumah sakit rekanan ikut dilindungi.</p>
+                </div>
+                <div class="as-info">
+                    <i class="fa-solid fa-people-roof"></i>
+                    <h3>Untuk Keluarga</h3>
+                    <p>Daftarkan hingga 6 peserta dalam satu pendaftaran.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="as-section" id="paket">
+            <h2>Pilih Paket Asuransi</h2>
+            <p class="as-sub">Harga per orang per bulan. Harga dan manfaat hanya contoh untuk tampilan aplikasi.</p>
+            <div class="as-grid">
+                <article class="as-card" data-paket="basic" data-harga="99000">
+                    <h3>Basic</h3>
+                    <p class="as-harga">Rp 99.000<span>/bulan</span></p>
+                    <ul>
+                        <li>Konsultasi dokter online tanpa batas</li>
+                        <li>Rawat jalan hingga Rp 2.000.000/tahun</li>
+                        <li>Diskon obat 10% di Toko HeiDoc</li>
+                    </ul>
+                    <a href="#daftar" class="as-btn as-btn-outline">Pilih Basic</a>
+                </article>
+
+                <article class="as-card as-card-populer" data-paket="plus" data-harga="199000">
+                    <span class="as-badge">Paling Populer</span>
+                    <h3>Plus</h3>
+                    <p class="as-harga">Rp 199.000<span>/bulan</span></p>
+                    <ul>
+                        <li>Semua manfaat Basic</li>
+                        <li>Rawat jalan hingga Rp 5.000.000/tahun</li>
+                        <li>Rawat inap hingga Rp 25.000.000/tahun</li>
+                        <li>Diskon obat 15%</li>
+                    </ul>
+                    <a href="#daftar" class="as-btn">Pilih Plus</a>
+                </article>
+
+                <article class="as-card" data-paket="premium" data-harga="349000">
+                    <h3>Premium</h3>
+                    <p class="as-harga">Rp 349.000<span>/bulan</span></p>
+                    <ul>
+                        <li>Semua manfaat Plus</li>
+                        <li>Rawat inap hingga Rp 100.000.000/tahun</li>
+                        <li>Cek kesehatan tahunan gratis</li>
+                        <li>Diskon obat 20%</li>
+                    </ul>
+                    <a href="#daftar" class="as-btn as-btn-outline">Pilih Premium</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="as-section" id="daftar">
+            <h2>Daftar Asuransi</h2>
+            <p class="as-sub">Isi data berikut untuk mengaktifkan perlindungan.</p>
+
+            <div class="as-box" id="as-form-wrap">
+                <form id="as-form" novalidate>
+                    <label for="as-nama">Nama lengkap</label>
+                    <input type="text" id="as-nama" placeholder="Nama sesuai identitas">
+
+                    <label for="as-usia">Usia</label>
+                    <input type="number" id="as-usia" min="1" max="65" placeholder="1 - 65 tahun">
+
+                    <label for="as-paket">Paket</label>
+                    <select id="as-paket">
+                        <option value="basic">Basic</option>
+                        <option value="plus" selected>Plus</option>
+                        <option value="premium">Premium</option>
+                    </select>
+
+                    <label for="as-peserta">Jumlah peserta</label>
+                    <input type="number" id="as-peserta" min="1" max="6" value="1">
+
+                    <div class="as-total">
+                        <span>Total premi per bulan</span>
+                        <strong id="as-total">Rp 0</strong>
+                    </div>
+
+                    <p class="as-error" id="as-error" hidden></p>
+                    <button type="submit" class="as-btn as-btn-full">Daftar Sekarang</button>
+                </form>
+            </div>
+
+            <div class="as-box as-sukses" id="as-sukses" hidden>
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Asuransi Aktif</h3>
+                <p>Kode polis: <strong id="as-kode"></strong></p>
+                <p id="as-ringkasan"></p>
+                <a href="riwayat.html" class="as-btn">Lihat Riwayat</a>
+                <button type="button" class="as-link" id="as-ubah">Daftar paket lain</button>
+            </div>
+        </section>
+
+        <section class="as-section">
+            <h2>Cara Klaim</h2>
+            <div class="as-grid as-grid-4">
+                <div class="as-step"><span>1</span><p>Berobat ke dokter atau rumah sakit rekanan</p></div>
+                <div class="as-step"><span>2</span><p>Siapkan kode polis dan bukti pembayaran</p></div>
+                <div class="as-step"><span>3</span><p>Ajukan klaim lewat aplikasi HeiDoc</p></div>
+                <div class="as-step"><span>4</span><p>Dana klaim dikembalikan setelah disetujui</p></div>
+            </div>
+        </section>
+
+        <section class="as-section as-faq">
+            <h2>Pertanyaan Umum</h2>
+            <details>
+                <summary>Siapa saja yang bisa mendaftar?</summary>
+                <p>Pengguna berusia 1 sampai 65 tahun. Satu pendaftaran bisa mencakup hingga 6 peserta.</p>
+            </details>
+            <details>
+                <summary>Apakah paket bisa diganti?</summary>
+                <p>Bisa. Daftar kembali dengan paket yang kamu inginkan, paket terbaru akan menjadi paket aktif.</p>
+            </details>
+            <details>
+                <summary>Kapan perlindungan mulai berlaku?</summary>
+                <p>Perlindungan aktif segera setelah pendaftaran berhasil dan kode polis muncul.</p>
+            </details>
+        </section>
+    </main>
+
+    <script src="../js/riwayat_helper.js"></script>
+    <script src="../js/asuransi.js"></script>
+</body>
+</html>
