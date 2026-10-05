@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('btn-logout').addEventListener('click', function () {
         if (confirm('Yakin ingin keluar?')) {
+            heidocLogout();
             window.location.href = 'login.html';
         }
     });
