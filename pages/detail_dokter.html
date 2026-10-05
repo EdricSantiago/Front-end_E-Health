@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Dokter - HaloDoc</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">HaloDoc</div>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+            <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
+            <a href="daftar_dokter.html" class="active">Dokter</a>
+            <a href="toko.html">Toko</a>
+        </nav>
+    </header>
+
+    <main class="dd-wrapper">
+        <a href="daftar_dokter.html" class="dd-kembali">← Kembali ke Daftar Dokter</a>
+
+        <section class="dd-card" id="dd-card">
+            <div class="dd-foto">Foto Dokter</div>
+
+            <div class="dd-info">
+                <h1 id="dd-nama"></h1>
+                <p id="dd-spesialis"></p>
+                <p class="dd-rating" id="dd-rating"></p>
+
+                <div class="dd-tombol">
+                    <button type="button" id="btn-chat">Konsultasi</button>
+                    <button type="button" class="dd-outline" id="btn-jadwal">Lihat Jadwal</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="dd-box" id="dd-detail">
+            <h2>Tentang Dokter</h2>
+            <p id="dd-tentang"></p>
+
+            <h2>Informasi</h2>
+            <ul>
+                <li>Pengalaman : <span id="dd-pengalaman"></span></li>
+                <li>Biaya konsultasi : <span id="dd-biaya"></span></li>
+            </ul>
+        </section>
+
+        <p class="dd-tidak-ada" id="dd-tidak-ada">Data dokter tidak ditemukan.</p>
+    </main>
+
+    <script src="../js/data/dokter.js"></script>
+    <script src="../js/detail_dokter.js"></script>
+</body>
+</html>

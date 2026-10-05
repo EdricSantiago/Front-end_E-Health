@@ -16,9 +16,13 @@
 @import url('pages/informasi_kulit.css');
 @import url('pages/chat_dokter.css');
 @import url('pages/kesehatan_hewan.css');
+@import url('pages/daftar_dokter.css');
+@import url('pages/detail_dokter.css');
+@import url('pages/jadwal_dokter.css');
 @import url('pages/home.css');
 @import url('pages/layanan.css');
 @import url('pages/profile.css');
 @import url('pages/daftar_dokter.css');
 @import url('pages/riwayat.css');
 @import url('pages/pengaturan.css');
+@import url('pages/diet_gizi.css');

@@ -1,0 +1,113 @@
+.jd-wrapper {
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+.jd-kembali {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #2f80ed;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.jd-judul {
+    font-size: 24px;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.jd-nama {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.jd-catatan {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 12px;
+}
+
+.jd-hari {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.jd-hari h3 {
+    font-size: 15px;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.jd-jam-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.jd-jam {
+    background-color: white;
+    color: #2f80ed;
+    border: 1px solid #2f80ed;
+    border-radius: 7px;
+    padding: 7px 14px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.jd-jam.dipilih {
+    background-color: #2f80ed;
+    color: white;
+}
+
+.jd-jam.penuh,
+.jd-jam:disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+.jd-jam:focus-visible,
+.jd-pesan:focus-visible {
+    outline: 3px solid #bfdbfe;
+    outline-offset: 2px;
+}
+
+.jd-pilihan {
+    margin: 16px 0;
+    padding: 12px 16px;
+    background-color: #f5f9ff;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.jd-pesan {
+    width: 100%;
+    background-color: #2f80ed;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.jd-pesan:disabled {
+    background-color: #bcd4f7;
+    cursor: not-allowed;
+}
+
+.jd-tidak-ada {
+    display: none;
+    text-align: center;
+    color: #6b7280;
+    margin-top: 30px;
+}

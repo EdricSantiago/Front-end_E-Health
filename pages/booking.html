@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Konsultasi - HaloDoc</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pages/booking.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">HaloDoc</div>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+            <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
+            <a href="daftar_dokter.html" class="active">Dokter</a>
+            <a href="toko.html">Toko</a>
+        </nav>
+    </header>
+
+    <main class="bk-wrapper">
+
+        <!-- Kalau link tidak valid -->
+        <section class="bk-kosong" id="bk-invalid" hidden>
+            <h1>Jadwal tidak ditemukan</h1>
+            <p>Link booking ini tidak lengkap atau jadwalnya sudah lewat. Pilih jadwal dokter lagi ya.</p>
+            <a href="daftar_dokter.html" class="bk-tombol">Lihat daftar dokter</a>
+        </section>
+
+        <!-- Form booking -->
+        <section id="bk-form-view" hidden>
+            <a href="#" class="bk-kembali" id="bk-ubah">← Ubah jadwal</a>
+            <h1 class="bk-judul">Booking Konsultasi</h1>
+
+            <div class="bk-ringkasan">
+                <div class="bk-avatar" id="bk-avatar" aria-hidden="true"></div>
+                <div class="bk-ringkasan-isi">
+                    <p class="bk-dokter" id="bk-dokter"></p>
+                    <p class="bk-spesialis" id="bk-spesialis"></p>
+                    <p class="bk-waktu" id="bk-waktu"></p>
+                </div>
+            </div>
+
+            <p class="bk-slot-error" id="bk-slot-error" role="alert" hidden>
+                Jadwal ini baru saja dipesan. <a href="#" id="bk-pilih-lain">Pilih jadwal lain</a>
+            </p>
+
+            <form id="bk-form" novalidate>
+                <div class="bk-kartu">
+                    <h2>Data pasien</h2>
+
+                    <div class="bk-grup">
+                        <label for="bk-nama">Nama lengkap</label>
+                        <input type="text" id="bk-nama" autocomplete="name" placeholder="Nama sesuai KTP">
+                        <p class="bk-err" id="err-nama" role="alert"></p>
+                    </div>
+
+                    <div class="bk-grup bk-grup-kecil">
+                        <label for="bk-usia">Usia (tahun)</label>
+                        <input type="number" id="bk-usia" min="1" max="120" inputmode="numeric" placeholder="Contoh: 20">
+                        <p class="bk-err" id="err-usia" role="alert"></p>
+                    </div>
+
+                    <div class="bk-grup">
+                        <label for="bk-keluhan">Keluhan</label>
+                        <textarea id="bk-keluhan" rows="4" maxlength="300" placeholder="Ceritakan keluhanmu, misalnya sudah berapa lama dan apa yang dirasakan"></textarea>
+                        <div class="bk-baris-info">
+                            <p class="bk-err" id="err-keluhan" role="alert"></p>
+                            <span class="bk-hitung" id="bk-hitung">0/300</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bk-kartu">
+                    <h2>Cara konsultasi</h2>
+                    <div class="bk-opsi-grid">
+                        <label class="bk-opsi">
+                            <input type="radio" name="metode" value="chat" checked>
+                            <span class="bk-opsi-isi">
+                                <strong>Chat</strong>
+                                <small>Tanya jawab lewat pesan</small>
+                            </span>
+                        </label>
+                        <label class="bk-opsi">
+                            <input type="radio" name="metode" value="video">
+                            <span class="bk-opsi-isi">
+                                <strong>Video call</strong>
+                                <small>Tatap muka, +Rp15.000</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="bk-kartu">
+                    <h2>Pembayaran</h2>
+                    <div class="bk-opsi-grid bk-tiga">
+                        <label class="bk-opsi">
+                            <input type="radio" name="bayar" value="Transfer Bank">
+                            <span class="bk-opsi-isi"><strong>Transfer Bank</strong></span>
+                        </label>
+                        <label class="bk-opsi">
+                            <input type="radio" name="bayar" value="E-Wallet">
+                            <span class="bk-opsi-isi"><strong>E-Wallet</strong></span>
+                        </label>
+                        <label class="bk-opsi">
+                            <input type="radio" name="bayar" value="QRIS">
+                            <span class="bk-opsi-isi"><strong>QRIS</strong></span>
+                        </label>
+                    </div>
+                    <p class="bk-err" id="err-bayar" role="alert"></p>
+
+                    <dl class="bk-rincian">
+                        <div><dt>Biaya konsultasi</dt><dd id="rc-konsultasi"></dd></div>
+                        <div id="rc-video-baris" hidden><dt>Tambahan video call</dt><dd id="rc-video"></dd></div>
+                        <div><dt>Biaya layanan</dt><dd id="rc-layanan"></dd></div>
+                        <div class="bk-total"><dt>Total</dt><dd id="rc-total"></dd></div>
+                    </dl>
+                </div>
+
+                <button type="submit" class="bk-tombol bk-penuh" id="bk-submit">Konfirmasi booking</button>
+            </form>
+        </section>
+
+        <!-- Tiket sukses -->
+        <section id="bk-sukses-view" hidden>
+            <div class="bk-sukses-kepala">
+                <div class="bk-centang" aria-hidden="true">✓</div>
+                <h1 class="bk-judul">Booking berhasil</h1>
+                <p class="bk-sub" id="sk-sub"></p>
+            </div>
+
+            <article class="bk-tiket" id="bk-tiket">
+                <div class="bk-tiket-atas">
+                    <p class="bk-label">Kode booking</p>
+                    <p class="bk-kode" id="sk-kode"></p>
+                    <span class="bk-status" id="sk-status">Terjadwal</span>
+                </div>
+                <div class="bk-tiket-garis" aria-hidden="true"></div>
+                <dl class="bk-tiket-bawah">
+                    <div><dt>Dokter</dt><dd id="sk-dokter"></dd></div>
+                    <div><dt>Waktu</dt><dd id="sk-waktu"></dd></div>
+                    <div><dt>Pasien</dt><dd id="sk-pasien"></dd></div>
+                    <div><dt>Cara konsultasi</dt><dd id="sk-metode"></dd></div>
+                    <div><dt>Pembayaran</dt><dd id="sk-bayar"></dd></div>
+                    <div><dt>Total</dt><dd id="sk-total"></dd></div>
+                </dl>
+            </article>
+
+            <p class="bk-info" id="sk-info" role="status" hidden></p>
+
+            <div class="bk-aksi">
+                <button type="button" class="bk-tombol" id="sk-kalender">Simpan ke kalender</button>
+                <a href="riwayat.html" class="bk-tombol bk-garis">Lihat riwayat</a>
+                <a href="../index.html" class="bk-tombol bk-garis">Kembali ke Home</a>
+            </div>
+
+            <div class="bk-batal">
+                <button type="button" class="bk-link-bahaya" id="sk-batal">Batalkan janji</button>
+                <div class="bk-konfirmasi" id="sk-konfirmasi" hidden>
+                    <p>Yakin mau membatalkan janji ini?</p>
+                    <button type="button" class="bk-tombol bk-bahaya" id="sk-ya">Ya, batalkan</button>
+                    <button type="button" class="bk-tombol bk-garis" id="sk-tidak">Tidak jadi</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/data/dokter.js"></script>
+    <script src="../js/riwayat_helper.js"></script>
+    <script src="../js/data/janji.js"></script>
+    <script src="../js/booking.js"></script>
+</body>
+</html>

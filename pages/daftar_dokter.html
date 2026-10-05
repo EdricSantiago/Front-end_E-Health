@@ -1,92 +1,43 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Dokter - HeiDoc</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/pages/home.css">
-    <link rel="stylesheet" href="../css/pages/daftar_dokter.css">
-</head>
-<body>
+    <title>Daftar Dokter - HaloDoc</title>
 
-    <header class="hd-topnav">
-        <div class="hd-topnav-inner">
-            <a href="../index.html" class="hd-logo">HeiDoc</a>
-            <nav class="hd-nav-links">
-                <a href="../index.html">Beranda</a>
-                <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
-                <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
-                <a href="toko.html">Toko</a>
-                <a href="bmi.html">BMI</a>
-            </nav>
-            <a href="login.html" class="hd-login-btn">Masuk</a>
-        </div>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">HaloDoc</div>
+
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+            <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
+            <a href="daftar_dokter.html" class="active">Dokter</a>
+            <a href="toko.html">Toko</a>
+        </nav>
     </header>
 
-    <main class="hd-main">
+    <h1 class="dokter-title">Daftar Dokter</h1>
 
-        <section class="hd-doctor-page-intro">
-            <h1>Daftar Dokter</h1>
-            <p>Pilih dokter yang sesuai dan mulai konsultasi langsung dari HeiDoc.</p>
-        </section>
+    <section class="dokter-filter">
+        <input type="text" id="cari-dokter" placeholder="Cari nama dokter...">
 
-        <section class="hd-doctors">
-            <div class="hd-doctor-list">
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status">● Online</span>
-                    <img src="../assets/images/doctors/andini.jpg" alt="dr. Andini Putri" class="hd-doc-avatar">
-                    <h3>dr. Andini Putri</h3>
-                    <p class="hd-doc-spec">Dokter Kulit</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.9</span>
-                        <span class="hd-doc-exp">8 thn</span>
-                    </div>
-                    <a href="chat_dokter.html?dokter=dr.%20Andini%20Putri&spesialis=Dokter%20Kulit" class="hd-doc-btn">Chat Dokter</a>
-                </div>
+        <select id="filter-spesialis">
+            <option value="">Semua Spesialis</option>
+            <option value="Dokter Kulit">Dokter Kulit</option>
+            <option value="Dokter Hewan">Dokter Hewan</option>
+        </select>
+    </section>
 
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status">● Online</span>
-                    <img src="../assets/images/doctors/raka.jpg" alt="dr. Raka Pratama" class="hd-doc-avatar">
-                    <h3>dr. Raka Pratama</h3>
-                    <p class="hd-doc-spec">Dokter Umum</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.8</span>
-                        <span class="hd-doc-exp">5 thn</span>
-                    </div>
-                    <a href="chat_dokter.html?dokter=dr.%20Raka%20Pratama&spesialis=Dokter%20Umum" class="hd-doc-btn">Chat Dokter</a>
-                </div>
+    <section class="dl-list" id="dl-list"></section>
 
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status">● Online</span>
-                    <img src="../assets/images/doctors/citra.jpg" alt="dr. Citra Lestari" class="hd-doc-avatar">
-                    <h3>dr. Citra Lestari</h3>
-                    <p class="hd-doc-spec">Dokter Anak</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.9</span>
-                        <span class="hd-doc-exp">10 thn</span>
-                    </div>
-                    <a href="chat_dokter.html?dokter=dr.%20Citra%20Lestari&spesialis=Dokter%20Anak" class="hd-doc-btn">Chat Dokter</a>
-                </div>
+    <p class="dl-kosong" id="dl-kosong">Dokter tidak ditemukan.</p>
 
-                <div class="hd-doc-card">
-                    <span class="hd-doc-status hd-offline">● Sibuk</span>
-                    <img src="../assets/images/doctors/budi.jpg" alt="dr. Budi Santoso" class="hd-doc-avatar">
-                    <h3>dr. Budi Santoso</h3>
-                    <p class="hd-doc-spec">Dokter Gigi</p>
-                    <div class="hd-doc-info">
-                        <span class="hd-doc-rating">★ 4.7</span>
-                        <span class="hd-doc-exp">12 thn</span>
-                    </div>
-                    <span class="hd-doc-btn hd-btn-off">Tidak Tersedia</span>
-                </div>
-            </div>
-        </section>
-
-        <div class="hd-spacer"></div>
-    </main>
-
+    <script src="../js/data/dokter.js"></script>
+    <script src="../js/daftar_dokter.js"></script>
 </body>
 </html>
