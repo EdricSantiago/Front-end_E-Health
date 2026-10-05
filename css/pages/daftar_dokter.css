@@ -86,9 +86,9 @@
 }
 
 .dl-tombol button {
-    background-color: #2f80ed;
+    background-color: #ED2A5C;
     color: white;
-    border: 1px solid #2f80ed;
+    border: 1px solid #ED2A5C;
     border-radius: 7px;
     padding: 7px 12px;
     font-size: 12px;
@@ -97,7 +97,7 @@
 
 .dl-tombol button.dl-outline {
     background-color: white;
-    color: #2f80ed;
+    color: #ED2A5C;
 }
 
 .dl-kosong {
@@ -115,4 +115,15 @@
     .dokter-filter {
         flex-direction: column;
     }
+}
+
+/* Seragam dengan tema HeiDoc */
+.dokter-filter input,
+.dokter-filter select,
+.dl-tombol button {
+    font-family: inherit;
+}
+
+.dl-list {
+    padding-bottom: 110px;
 }

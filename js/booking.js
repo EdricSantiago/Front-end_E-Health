@@ -175,9 +175,9 @@
         var baris = [
             "BEGIN:VCALENDAR",
             "VERSION:2.0",
-            "PRODID:-//HaloDoc//Booking//ID",
+            "PRODID:-//HeiDoc//Booking//ID",
             "BEGIN:VEVENT",
-            "UID:" + j.kode + "@halodoc",
+            "UID:" + j.kode + "@heidoc",
             "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z",
             "DTSTART:" + stempel(j.tanggal, j.jam, 0),
             "DTEND:" + stempel(j.tanggal, j.jam, 30),

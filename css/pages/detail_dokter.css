@@ -7,7 +7,7 @@
 .dd-kembali {
     display: inline-block;
     margin-bottom: 16px;
-    color: #2f80ed;
+    color: #ED2A5C;
     text-decoration: none;
     font-size: 14px;
 }
@@ -57,9 +57,9 @@
 }
 
 .dd-tombol button {
-    background-color: #2f80ed;
+    background-color: #ED2A5C;
     color: white;
-    border: 1px solid #2f80ed;
+    border: 1px solid #ED2A5C;
     border-radius: 8px;
     padding: 9px 16px;
     font-size: 13px;
@@ -68,7 +68,7 @@
 
 .dd-tombol button.dd-outline {
     background-color: white;
-    color: #2f80ed;
+    color: #ED2A5C;
 }
 
 .dd-box {
@@ -116,4 +116,13 @@
     .dd-tombol {
         justify-content: center;
     }
+}
+
+/* Seragam dengan tema HeiDoc */
+.dd-tombol button {
+    font-family: inherit;
+}
+
+.dd-wrapper {
+    margin-bottom: 110px;
 }

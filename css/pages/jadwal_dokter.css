@@ -7,7 +7,7 @@
 .jd-kembali {
     display: inline-block;
     margin-bottom: 16px;
-    color: #2f80ed;
+    color: #ED2A5C;
     text-decoration: none;
     font-size: 14px;
 }
@@ -52,8 +52,8 @@
 
 .jd-jam {
     background-color: white;
-    color: #2f80ed;
-    border: 1px solid #2f80ed;
+    color: #ED2A5C;
+    border: 1px solid #ED2A5C;
     border-radius: 7px;
     padding: 7px 14px;
     font-size: 13px;
@@ -61,7 +61,7 @@
 }
 
 .jd-jam.dipilih {
-    background-color: #2f80ed;
+    background-color: #ED2A5C;
     color: white;
 }
 
@@ -76,14 +76,14 @@
 
 .jd-jam:focus-visible,
 .jd-pesan:focus-visible {
-    outline: 3px solid #bfdbfe;
+    outline: 3px solid #f7a1b8;
     outline-offset: 2px;
 }
 
 .jd-pilihan {
     margin: 16px 0;
     padding: 12px 16px;
-    background-color: #f5f9ff;
+    background-color: #fff1f2;
     border-radius: 8px;
     font-size: 14px;
     color: #1f2937;
@@ -91,7 +91,7 @@
 
 .jd-pesan {
     width: 100%;
-    background-color: #2f80ed;
+    background-color: #ED2A5C;
     color: white;
     border: none;
     border-radius: 8px;
@@ -101,7 +101,7 @@
 }
 
 .jd-pesan:disabled {
-    background-color: #bcd4f7;
+    background-color: #f6a5b9;
     cursor: not-allowed;
 }
 
@@ -110,4 +110,14 @@
     text-align: center;
     color: #6b7280;
     margin-top: 30px;
+}
+
+/* Seragam dengan tema HeiDoc */
+.jd-jam,
+.jd-pesan {
+    font-family: inherit;
+}
+
+.jd-wrapper {
+    margin-bottom: 110px;
 }

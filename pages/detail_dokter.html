@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Dokter - HaloDoc</title>
+    <title>Detail Dokter - HeiDoc</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">HaloDoc</div>
-
-        <nav class="nav">
-            <a href="../index.html">Home</a>
-            <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
-            <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
-            <a href="daftar_dokter.html" class="active">Dokter</a>
-            <a href="toko.html">Toko</a>
-        </nav>
+    <header class="hd-topnav">
+        <div class="hd-topnav-inner">
+            <a href="../index.html" class="hd-logo">HeiDoc</a>
+            <nav class="hd-nav-links">
+                <a href="../index.html">Beranda</a>
+                <a href="kesehatan_kulit.html">Kesehatan Kulit</a>
+                <a href="kesehatan_hewan.html">Kesehatan Hewan</a>
+                <a href="daftar_dokter.html" class="active">Dokter</a>
+                <a href="toko.html">Toko</a>
+                <a href="bmi.html">BMI</a>
+            </nav>
+            <a href="login.html" class="hd-login-btn">Masuk</a>
+        </div>
     </header>
 
     <main class="dd-wrapper">
@@ -55,5 +60,6 @@
 
     <script src="../js/data/dokter.js"></script>
     <script src="../js/detail_dokter.js"></script>
+    <script src="../js/components/bottom_nav.js"></script>
 </body>
 </html>

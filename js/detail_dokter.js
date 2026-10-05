@@ -5,7 +5,7 @@ if (!dokter) {
     document.getElementById("dd-detail").style.display = "none";
     document.getElementById("dd-tidak-ada").style.display = "block";
 } else {
-    document.title = dokter.nama + " - HaloDoc";
+    document.title = dokter.nama + " - HeiDoc";
 
     document.getElementById("dd-nama").textContent = dokter.nama;
     document.getElementById("dd-spesialis").textContent = dokter.spesialis;
