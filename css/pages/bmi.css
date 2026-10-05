@@ -3,7 +3,6 @@
     max-width: 768px;
     margin: 0 auto;
     background-color: transparent;
-    min-height: 100vh;
     padding: 24px 20px 40px;
     display: flex;
     flex-direction: column;
@@ -189,7 +188,7 @@
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
-    margin-top: auto;
+    margin-top: 32px;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
