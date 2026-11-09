@@ -62,7 +62,7 @@
         el("bk-spesialis").textContent = dokterBooking.spesialis;
         el("bk-waktu").textContent = formatTanggal(tanggal) + ", pukul " + jam;
 
-        var linkJadwal = "jadwal_dokterpage?id=" + dokterBooking.id;
+        var linkJadwal = "/dokter/jadwal?id=" + dokterBooking.id;
         el("bk-ubah").href = linkJadwal;
         el("bk-pilih-lain").href = linkJadwal;
     }

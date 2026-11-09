@@ -38,11 +38,11 @@ function tampilkanDokter() {
 }
 
 function lihatDetail(id) {
-    window.location.href = "detail_dokterpage?id=" + id;
+    window.location.href = "/dokter/" + id;
 }
 
 function lihatJadwal(id) {
-    window.location.href = "jadwal_dokterpage?id=" + id;
+    window.location.href = "/dokter/jadwal?id=" + id;
 }
 
 cariEl.addEventListener("input", tampilkanDokter);

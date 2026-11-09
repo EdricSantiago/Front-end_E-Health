@@ -1,5 +1,5 @@
-@import url('./styles/main.css');
-@import url('./styles/pages/booking.css');
+@import url('../styles/main.css');
+@import url('../styles/pages/booking.css');
 
 /* React-only extensions: original selectors and assets remain unchanged. */
 .hd-auth-feedback { font-size: 13px; font-weight: 600; border-radius: 8px; padding: 11px 14px; background: #fff0f3; color: #b42348; margin-top: 14px; }

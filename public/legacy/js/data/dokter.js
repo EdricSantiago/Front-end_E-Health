@@ -69,5 +69,6 @@ function cariDokter(id) {
 }
 
 function ambilIdDariUrl() {
-    return new URLSearchParams(window.location.search).get("id");
+    const pathId = window.location.pathname.match(/^\/dokter\/(\d+)\/?$/)?.[1];
+    return pathId || new URLSearchParams(window.location.search).get("id");
 }

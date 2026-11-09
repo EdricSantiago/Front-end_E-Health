@@ -4,11 +4,12 @@ const chatBox = document.getElementById("chatBox");
 
 const urlParams = new URLSearchParams(window.location.search);
 const doctorName = urlParams.get("doctor") || urlParams.get("dokter");
+const doctorSpecialist = urlParams.get("specialist") || urlParams.get("spesialis");
 
 document.getElementById("doctorName").textContent = doctorName;
 
 document.getElementById("doctorSpecialist").textContent =
-    "Dokter Kulit";
+    doctorSpecialist || "Dokter Kulit";
 
 chatForm.addEventListener("submit", function(event) {
     event.preventDefault();

@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Buka `http://localhost:3000` → jika belum login, diarahkan ke `/pages/loginpage`.
+Buka `http://localhost:3000` → jika belum login, diarahkan ke `/login`.
 
 **Akun demo:** username **`demo`**, password **`demo123`**. Anda juga bisa klik **Daftar di sini** untuk membuat akun demo sendiri, lalu login kembali. Gunakan login, bukan browser console, untuk pengujian.
 
@@ -26,37 +26,37 @@ Buka `http://localhost:3000` → jika belum login, diarahkan ke `/pages/loginpag
 
 ## Layout dan URL
 
-Halaman utama: `/`.
-
-Sesuai ZIP asli, setiap halaman selain beranda tersedia di `/pages/nama_halaman.html`, **walaupun sekarang file implementasinya `page.tsx` di App Router**. Ini untuk menjaga tautan antarkomponen dan interaksi asli tetap bekerja pada masa migrasi.
+Halaman utama: `/`. Route group `(auth)` mengelompokkan halaman autentikasi tanpa menambahkan segmen URL.
 
 | Halaman | URL | File React |
 |---|---|---|
-| Login & register | `/pages/loginpage` | `app/pages/loginpage/page.tsx` |
 | Beranda | `/` | `app/page.tsx` |
-| Daftar dokter | `/pages/daftar_dokterpage` | `app/pages/daftar_dokterpage/page.tsx` |
-| Detail dokter | `/pages/detail_dokterpage?id=1` | `app/pages/detail_dokterpage/page.tsx` |
-| Jadwal dokter | `/pages/jadwal_dokterpage?id=1` | `app/pages/jadwal_dokterpage/page.tsx` |
-| Booking | `/pages/bookingpage?id=1&tanggal=YYYY-MM-DD&jam=09%3A00` | `app/pages/bookingpage/page.tsx` |
-| Toko kesehatan | `/pages/tokopage` | `app/pages/tokopage/page.tsx` |
-| Profil | `/pages/profilepage` | `app/pages/profilepage/page.tsx` |
-| Riwayat | `/pages/riwayatpage` | `app/pages/riwayatpage/page.tsx` |
-| BMI | `/pages/bmipage` | `app/pages/bmipage/page.tsx` |
-| Layanan lain | `/pages/layananpage`, `/pages/asuransipage`, `/pages/kesehatan_kulitpage`, `/pages/kesehatan_hewanpage`, `/pages/diet_gizipage`, dan lainnya | `app/pages/.../page.tsx` |
+| Login & register | `/login` | `app/(auth)/login/page.tsx` |
+| Profil, pengaturan, riwayat | `/profile`, `/pengaturan`, `/riwayat` | `app/(auth)/{profile,pengaturan,riwayat}/page.tsx` |
+| Daftar dokter | `/dokter` | `app/dokter/page.tsx` |
+| Detail dokter | `/dokter/1` | `app/dokter/[id]/page.tsx` |
+| Jadwal & booking | `/dokter/jadwal?id=1`, `/dokter/booking?id=1&tanggal=YYYY-MM-DD&jam=09%3A00` | `app/dokter/{jadwal,booking}/page.tsx` |
+| Chat dokter | `/dokter/chat` | `app/dokter/chat/page.tsx` |
+| Toko kesehatan | `/toko` | `app/toko/page.tsx` |
+| Menu layanan | `/layanan` | `app/layanan/page.tsx` |
+| BMI & FAQ | `/layanan/bmi`, `/layanan/bmi/faq` | `app/layanan/bmi/.../page.tsx` |
+| Kulit, hewan, gizi, asuransi | `/layanan/kulit`, `/layanan/hewan`, `/layanan/gizi`, `/layanan/asuransi` dan subrute info/chat | `app/layanan/.../page.tsx` |
 
 ## Struktur
 
 ```
 app/
+  (auth)/                  # Login, profil, pengaturan, riwayat
+  dokter/                  # Daftar, detail dinamis, jadwal, booking, chat
+  layanan/                 # Menu, BMI, kulit, hewan, gizi, asuransi
+  toko/page.tsx
   layout.tsx               # React global layout + CSS original
+  globals.css
   page.tsx                 # Beranda hasil migrasi HTML→TSX
-  pages/
-    loginpage/page.tsx    # Native React state/form login & daftar
-    tokopage/page.tsx     # UI toko asli dalam JSX
-    ...                    # Halaman asli lainnya (JSX)
-  styles/                  # Salinan CSS asli HeiDoc, seluruh class tetap sama
+styles/                    # Salinan CSS asli HeiDoc, seluruh class tetap sama
 components/
-  SiteChrome.tsx           # Navigasi atas, bawah, dan route guard React
+  SiteChrome.tsx           # Navigasi atas dan route guard React
+  BottomNav.tsx            # Navigasi bawah mobile
   HomeEffects.tsx          # Carousel dan search di lifecycle React
   LegacyEffects.tsx        # Bridge sementara JS asli, agar fitur lama tetap aktif
 lib/
