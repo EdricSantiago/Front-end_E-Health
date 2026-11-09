@@ -17,7 +17,7 @@ export default function HomePage() {
             <p className="hd-hero-sub">
               Konsultasi dokter, beli obat, dan cek kesehatan dalam satu aplikasi.
             </p>
-            <<div className="hd-hero-actions">
+            <div className="hd-hero-actions">
                 <a href="pages/kesehatan_kulit.html" className="hd-btn-primary">
                 Chat Dokter
                     </a>
