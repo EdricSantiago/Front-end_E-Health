@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Buka `http://localhost:3000` → jika belum login, diarahkan ke `/pages/login.html`.
+Buka `http://localhost:3000` → jika belum login, diarahkan ke `/pages/loginpage`.
 
 **Akun demo:** username **`demo`**, password **`demo123`**. Anda juga bisa klik **Daftar di sini** untuk membuat akun demo sendiri, lalu login kembali. Gunakan login, bukan browser console, untuk pengujian.
 
@@ -32,17 +32,17 @@ Sesuai ZIP asli, setiap halaman selain beranda tersedia di `/pages/nama_halaman.
 
 | Halaman | URL | File React |
 |---|---|---|
-| Login & register | `/pages/login.html` | `app/pages/login.html/page.tsx` |
+| Login & register | `/pages/loginpage` | `app/pages/loginpage/page.tsx` |
 | Beranda | `/` | `app/page.tsx` |
-| Daftar dokter | `/pages/daftar_dokter.html` | `app/pages/daftar_dokter.html/page.tsx` |
-| Detail dokter | `/pages/detail_dokter.html?id=1` | `app/pages/detail_dokter.html/page.tsx` |
-| Jadwal dokter | `/pages/jadwal_dokter.html?id=1` | `app/pages/jadwal_dokter.html/page.tsx` |
-| Booking | `/pages/booking.html?id=1&tanggal=YYYY-MM-DD&jam=09%3A00` | `app/pages/booking.html/page.tsx` |
-| Toko kesehatan | `/pages/toko.html` | `app/pages/toko.html/page.tsx` |
-| Profil | `/pages/profile.html` | `app/pages/profile.html/page.tsx` |
-| Riwayat | `/pages/riwayat.html` | `app/pages/riwayat.html/page.tsx` |
-| BMI | `/pages/bmi.html` | `app/pages/bmi.html/page.tsx` |
-| Layanan lain | `/pages/layanan.html`, `/pages/asuransi.html`, `/pages/kesehatan_kulit.html`, `/pages/kesehatan_hewan.html`, `/pages/diet_gizi.html`, dan lainnya | `app/pages/.../page.tsx` |
+| Daftar dokter | `/pages/daftar_dokterpage` | `app/pages/daftar_dokterpage/page.tsx` |
+| Detail dokter | `/pages/detail_dokterpage?id=1` | `app/pages/detail_dokterpage/page.tsx` |
+| Jadwal dokter | `/pages/jadwal_dokterpage?id=1` | `app/pages/jadwal_dokterpage/page.tsx` |
+| Booking | `/pages/bookingpage?id=1&tanggal=YYYY-MM-DD&jam=09%3A00` | `app/pages/bookingpage/page.tsx` |
+| Toko kesehatan | `/pages/tokopage` | `app/pages/tokopage/page.tsx` |
+| Profil | `/pages/profilepage` | `app/pages/profilepage/page.tsx` |
+| Riwayat | `/pages/riwayatpage` | `app/pages/riwayatpage/page.tsx` |
+| BMI | `/pages/bmipage` | `app/pages/bmipage/page.tsx` |
+| Layanan lain | `/pages/layananpage`, `/pages/asuransipage`, `/pages/kesehatan_kulitpage`, `/pages/kesehatan_hewanpage`, `/pages/diet_gizipage`, dan lainnya | `app/pages/.../page.tsx` |
 
 ## Struktur
 
@@ -51,8 +51,8 @@ app/
   layout.tsx               # React global layout + CSS original
   page.tsx                 # Beranda hasil migrasi HTML→TSX
   pages/
-    login.html/page.tsx    # Native React state/form login & daftar
-    toko.html/page.tsx     # UI toko asli dalam JSX
+    loginpage/page.tsx    # Native React state/form login & daftar
+    tokopage/page.tsx     # UI toko asli dalam JSX
     ...                    # Halaman asli lainnya (JSX)
   styles/                  # Salinan CSS asli HeiDoc, seluruh class tetap sama
 components/

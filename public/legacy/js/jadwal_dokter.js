@@ -56,7 +56,7 @@ function pilihJam(tombol) {
 document.getElementById("jd-pesan").addEventListener("click", function () {
     if (tanggalDipilih === "") return;
 
-    window.location.href = "booking.html?id=" + dokterJadwal.id +
+    window.location.href = "bookingpage?id=" + dokterJadwal.id +
         "&tanggal=" + tanggalDipilih +
         "&jam=" + encodeURIComponent(jamDipilih);
 });

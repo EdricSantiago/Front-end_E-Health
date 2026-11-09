@@ -5,7 +5,7 @@ export default function JadwalDokterHtmlPage() {
   return (
     <>
     <main className="jd-wrapper">
-      <a href="daftar_dokter.html" className="jd-kembali">
+      <a href="daftar_dokterpage" className="jd-kembali">
         ← Kembali ke Daftar Dokter
       </a>
       <h1 className="jd-judul">

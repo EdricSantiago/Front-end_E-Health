@@ -55,7 +55,7 @@ export default function InformasiHewanHtmlPage() {
           </p>
         </div>
       </div>
-      <a href="kesehatan_hewan.html" className="animal-back">
+      <a href="kesehatan_hewanpage" className="animal-back">
         Kembali ke Kesehatan Hewan
       </a>
     </main>

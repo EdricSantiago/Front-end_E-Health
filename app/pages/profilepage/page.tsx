@@ -41,7 +41,7 @@ export default function ProfileHtmlPage() {
           </span>
         </div>
         <div className="menu-grid">
-          <a href="bmi.html" className="menu-card">
+          <a href="bmipage" className="menu-card">
             <div className="menu-icon bg-amber">
               <i className="fa-solid fa-calculator icon-amber"></i>
             </div>
@@ -57,7 +57,7 @@ export default function ProfileHtmlPage() {
               ›
             </div>
           </a>
-          <a href="toko.html" className="menu-card">
+          <a href="tokopage" className="menu-card">
             <div className="menu-icon bg-green">
               <i className="fa-solid fa-basket-shopping icon-green"></i>
             </div>

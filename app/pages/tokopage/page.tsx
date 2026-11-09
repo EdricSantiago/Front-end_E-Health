@@ -309,7 +309,7 @@ export default function TokoHtmlPage() {
           Kode pesanan
           <strong id="cart-kode"></strong>
         </p>
-        <a href="riwayat.html" className="cart-checkout">
+        <a href="riwayatpage" className="cart-checkout">
           Lihat Riwayat
         </a>
         <button type="button" className="cart-link" id="cart-lanjut">

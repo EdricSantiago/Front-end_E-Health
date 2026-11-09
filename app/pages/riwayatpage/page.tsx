@@ -6,7 +6,7 @@ export default function RiwayatHtmlPage() {
     <>
     <main className="hd-main">
       <div className="riwayat-header">
-        <a href="../index.html" className="btn-back">
+        <a href="../indexpage" className="btn-back">
           ←
         </a>
         <h1>

@@ -9,13 +9,13 @@ function goToSection(sectionId) {
 }
 
 function goToShop() {
-    window.location.href = "toko.html";
+    window.location.href = "tokopage";
 }
 
 function goToInformation() {
-    window.location.href = "informasi_kulit.html";
+    window.location.href = "informasi_kulitpage";
 }
 
 function openChat(doctorName) {
-    window.location.href = "chat_dokter.html?doctor=" + encodeURIComponent(doctorName);
+    window.location.href = "chat_dokterpage?doctor=" + encodeURIComponent(doctorName);
 }

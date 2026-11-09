@@ -22,7 +22,7 @@ export default function BmiHtmlPage() {
           <p className="bmi-banner-text">
             Body Mass Index (BMI) adalah cara menghitung berat badan ideal berdasarkan tinggi dan berat badan.
           </p>
-          <a href="bmi_faq.html" className="bmi-banner-link">
+          <a href="bmi_faqpage" className="bmi-banner-link">
             SELENGKAPNYA
           </a>
         </div>

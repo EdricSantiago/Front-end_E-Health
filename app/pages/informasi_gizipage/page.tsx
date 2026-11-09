@@ -58,7 +58,7 @@ export default function InformasiGiziHtmlPage() {
           </p>
         </div>
       </div>
-      <a href="diet_gizi.html" className="diet-back">
+      <a href="diet_gizipage" className="diet-back">
         Kembali ke Diet &amp; Gizi
       </a>
     </main>

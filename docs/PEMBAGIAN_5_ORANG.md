@@ -12,10 +12,10 @@
 | Anggota | File yang dimiliki | Cicilan pertama | Cicilan kedua | Cicilan ketiga | Cicilan keempat |
 |---|---|---|---|---|---|
 | 1: Beranda + UI | `app/page.tsx`, `components/HomeEffects.tsx`, `components/SiteChrome.tsx`, `app/styles/pages/home.css`, `app/styles/components/bottom_nav.css` | Periksa hero, topnav, bottomnav dan gambar asli | Carousel/search UI | Responsif mobile | Review style lintas halaman |
-| 2: Dokter + Booking | `app/pages/daftar_dokter.html`, `detail_dokter.html`, `jadwal_dokter.html`, `booking.html`, `chat_dokter.html`; terkait `public/legacy/js/{daftar_dokter,detail_dokter,jadwal_dokter,booking,chat_dokter}.js` | Daftar + search/filter dokter | Detail dokter | Jadwal + waktu | Booking + chat + riwayat dummy |
-| 3: Toko | `app/pages/toko.html/page.tsx`, `app/styles/pages/toko_kesehatan.css`, `public/legacy/js/toko.js` | Grid foto produk | Kategori & search | Keranjang + jumlah + total | Checkout dummy & riwayat |
-| 4: Login, Profil, Pengaturan | `app/pages/login.html/page.tsx`, `lib/browser-auth.ts`, `app/pages/profile.html/page.tsx`, `app/pages/pengaturan.html/page.tsx`, `app/pages/riwayat.html/page.tsx` | Login dan register lokal | Guard route dan logout | Profil ubah dan validasi | Riwayat/pengaturan tersimpan lokal |
-| 5: Layanan lainnya | `app/pages/{bmi.html,bmi_faq.html,kesehatan_kulit.html,kesehatan_hewan.html,diet_gizi.html,asuransi.html,informasi_*.html,chat_hewan.html,chat_gizi.html}/page.tsx` | BMI + FAQ | Kulit dan hewan | Diet & gizi | Asuransi + halaman info, audit aksesibilitas |
+| 2: Dokter + Booking | `app/pages/daftar_dokterpage`, `detail_dokterpage`, `jadwal_dokterpage`, `bookingpage`, `chat_dokterpage`; terkait `public/legacy/js/{daftar_dokter,detail_dokter,jadwal_dokter,booking,chat_dokter}.js` | Daftar + search/filter dokter | Detail dokter | Jadwal + waktu | Booking + chat + riwayat dummy |
+| 3: Toko | `app/pages/tokopage/page.tsx`, `app/styles/pages/toko_kesehatan.css`, `public/legacy/js/toko.js` | Grid foto produk | Kategori & search | Keranjang + jumlah + total | Checkout dummy & riwayat |
+| 4: Login, Profil, Pengaturan | `app/pages/loginpage/page.tsx`, `lib/browser-auth.ts`, `app/pages/profilepage/page.tsx`, `app/pages/pengaturanpage/page.tsx`, `app/pages/riwayatpage/page.tsx` | Login dan register lokal | Guard route dan logout | Profil ubah dan validasi | Riwayat/pengaturan tersimpan lokal |
+| 5: Layanan lainnya | `app/pages/{bmipage,bmi_faqpage,kesehatan_kulitpage,kesehatan_hewanpage,diet_gizipage,asuransipage,informasi_*.html,chat_hewanpage,chat_gizipage}/page.tsx` | BMI + FAQ | Kulit dan hewan | Diet & gizi | Asuransi + halaman info, audit aksesibilitas |
 
 ## Mengubah JavaScript lama menjadi React tanpa mengubah UI
 

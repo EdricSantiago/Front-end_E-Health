@@ -3,13 +3,13 @@ function openAnimalChat(doctorName) {
         doctorName = "Dokter Hewan";
     }
 
-    window.location.href = "chat_hewan.html?doctor=" + encodeURIComponent(doctorName);
+    window.location.href = "chat_hewanpage?doctor=" + encodeURIComponent(doctorName);
 }
 
 function openAnimalInfo() {
-    window.location.href = "informasi_hewan.html";
+    window.location.href = "informasi_hewanpage";
 }
 
 function openAnimalProduct() {
-    window.location.href = "toko.html";
+    window.location.href = "tokopage";
 }

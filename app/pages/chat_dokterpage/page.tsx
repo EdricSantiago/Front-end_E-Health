@@ -6,7 +6,7 @@ export default function ChatDokterHtmlPage() {
     <>
     <main className="chat-page">
       <div className="chat-header">
-        <a href="kesehatan_kulit.html">
+        <a href="kesehatan_kulitpage">
           ←
         </a>
         <div>

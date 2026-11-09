@@ -11,7 +11,7 @@ export default function PengaturanHtmlPage() {
         </h1>
       </div>
       <div className="settings-list">
-        <a href="bmi_faq.html" className="settings-row">
+        <a href="bmi_faqpage" className="settings-row">
           <div className="settings-icon">
             <i className="fa-solid fa-circle-question"></i>
           </div>

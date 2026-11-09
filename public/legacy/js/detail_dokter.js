@@ -15,10 +15,10 @@ if (!dokter) {
     document.getElementById("dd-biaya").textContent = formatRupiah(dokter.biaya);
 
     document.getElementById("btn-chat").onclick = function () {
-        window.location.href = "chat_dokter.html?doctor=" + encodeURIComponent(dokter.nama);
+        window.location.href = "chat_dokterpage?doctor=" + encodeURIComponent(dokter.nama);
     };
 
     document.getElementById("btn-jadwal").onclick = function () {
-        window.location.href = "jadwal_dokter.html?id=" + dokter.id;
+        window.location.href = "jadwal_dokterpage?id=" + dokter.id;
     };
 }

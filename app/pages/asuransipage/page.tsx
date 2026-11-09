@@ -208,7 +208,7 @@ export default function AsuransiHtmlPage() {
             <strong id="as-kode"></strong>
           </p>
           <p id="as-ringkasan"></p>
-          <a href="riwayat.html" className="as-btn">
+          <a href="riwayatpage" className="as-btn">
             Lihat Riwayat
           </a>
           <button type="button" className="as-link" id="as-ubah">

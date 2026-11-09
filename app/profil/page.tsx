@@ -1,2 +1,2 @@
 import { redirect } from 'next/navigation';
-export default function Alias() { redirect('/pages/profile.html'); }
+export default function Alias() { redirect('/pages/profilepage'); }

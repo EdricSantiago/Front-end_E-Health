@@ -1,2 +1,2 @@
 import { redirect } from 'next/navigation';
-export default function Alias() { redirect('/pages/daftar_dokter.html'); }
+export default function Alias() { redirect('/pages/daftar_dokterpage'); }

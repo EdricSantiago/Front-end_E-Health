@@ -5,7 +5,7 @@ export default function BmiFaqHtmlPage() {
     <>
     <div className="bmi-container">
       <div className="bmi-header">
-        <a href="bmi.html" className="btn-back">
+        <a href="bmipage" className="btn-back">
           <i className="fa-solid fa-arrow-left"></i>
         </a>
         <h1 className="bmi-header-title">
@@ -49,7 +49,7 @@ export default function BmiFaqHtmlPage() {
           </li>
         </ul>
       </div>
-      <a href="bmi.html" className="btn-kembali-faq">
+      <a href="bmipage" className="btn-kembali-faq">
         Kembali
       </a>
     </div>

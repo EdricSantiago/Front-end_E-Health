@@ -12,7 +12,7 @@ export default function BookingHtmlPage() {
         <p>
           Link booking ini tidak lengkap atau jadwalnya sudah lewat. Pilih jadwal dokter lagi ya.
         </p>
-        <a href="daftar_dokter.html" className="bk-tombol">
+        <a href="daftar_dokterpage" className="bk-tombol">
           Lihat daftar dokter
         </a>
       </section>
@@ -226,10 +226,10 @@ export default function BookingHtmlPage() {
           <button type="button" className="bk-tombol" id="sk-kalender">
             Simpan ke kalender
           </button>
-          <a href="riwayat.html" className="bk-tombol bk-garis">
+          <a href="riwayatpage" className="bk-tombol bk-garis">
             Lihat riwayat
           </a>
-          <a href="../index.html" className="bk-tombol bk-garis">
+          <a href="../indexpage" className="bk-tombol bk-garis">
             Kembali ke Home
           </a>
         </div>

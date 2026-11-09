@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 (function () {
     var ref = document.referrer;
-    if (ref.indexOf('bmi_faq.html') === -1) {
-        if (ref.indexOf('profile.html') !== -1) {
-            sessionStorage.setItem('bmi_origin', 'profile.html');
-        } else if (ref.indexOf('layanan.html') !== -1) {
-            sessionStorage.setItem('bmi_origin', 'layanan.html');
-        } else if (ref.indexOf('index.html') !== -1 || ref.endsWith('/pages/') === false && ref === '') {
-            sessionStorage.setItem('bmi_origin', '../index.html');
+    if (ref.indexOf('bmi_faqpage') === -1) {
+        if (ref.indexOf('profilepage') !== -1) {
+            sessionStorage.setItem('bmi_origin', 'profilepage');
+        } else if (ref.indexOf('layananpage') !== -1) {
+            sessionStorage.setItem('bmi_origin', 'layananpage');
+        } else if (ref.indexOf('indexpage') !== -1 || ref.endsWith('/pages/') === false && ref === '') {
+            sessionStorage.setItem('bmi_origin', '../indexpage');
         } else {
-            sessionStorage.setItem('bmi_origin', '../index.html');
+            sessionStorage.setItem('bmi_origin', '../indexpage');
         }
     }
 })();
@@ -87,6 +87,6 @@ function goBack() {
     if (origin) {
         window.location.href = origin;
     } else {
-        window.location.href = '../index.html';
+        window.location.href = '../indexpage';
     }
 }

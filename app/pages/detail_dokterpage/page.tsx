@@ -5,7 +5,7 @@ export default function DetailDokterHtmlPage() {
   return (
     <>
     <main className="dd-wrapper">
-      <a href="daftar_dokter.html" className="dd-kembali">
+      <a href="daftar_dokterpage" className="dd-kembali">
         ← Kembali ke Daftar Dokter
       </a>
       <section className="dd-card" id="dd-card">

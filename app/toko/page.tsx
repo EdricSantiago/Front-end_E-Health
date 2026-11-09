@@ -1,2 +1,2 @@
 import { redirect } from 'next/navigation';
-export default function Alias() { redirect('/pages/toko.html'); }
+export default function Alias() { redirect('/pages/tokopage'); }

@@ -8,12 +8,12 @@ export default function LayananHtmlPage() {
         <h2 className="layanan-section-title">
           Layanan Favoritmu
         </h2>
-        <a href="../index.html" className="btn-ubah-link">
+        <a href="../indexpage" className="btn-ubah-link">
           Kembali
         </a>
       </div>
       <div className="favorit-grid">
-        <a href="chat_dokter.html" className="favorit-item">
+        <a href="chat_dokterpage" className="favorit-item">
           <div className="favorit-icon-circle bg-sky">
             <i className="fa-solid fa-comments icon-sky"></i>
           </div>
@@ -21,7 +21,7 @@ export default function LayananHtmlPage() {
             Chat dengan Dokter
           </span>
         </a>
-        <a href="toko.html" className="favorit-item">
+        <a href="tokopage" className="favorit-item">
           <div className="favorit-icon-circle bg-red">
             <i className="fa-solid fa-basket-shopping icon-red"></i>
           </div>
@@ -29,7 +29,7 @@ export default function LayananHtmlPage() {
             Toko Kesehatan
           </span>
         </a>
-        <a href="kesehatan_kulit.html" className="favorit-item">
+        <a href="kesehatan_kulitpage" className="favorit-item">
           <div className="favorit-icon-circle bg-pink">
             <span className="badge-text text-pink">
               haloskin
@@ -39,7 +39,7 @@ export default function LayananHtmlPage() {
             Kulit Cantik &amp; Sehat
           </span>
         </a>
-        <a href="kesehatan_kulit.html" className="favorit-item">
+        <a href="kesehatan_kulitpage" className="favorit-item">
           <div className="favorit-icon-circle bg-orange">
             <i className="fa-solid fa-spa icon-orange"></i>
           </div>
@@ -52,7 +52,7 @@ export default function LayananHtmlPage() {
         LAYANAN UTAMA
       </div>
       <div className="layanan-list">
-        <a href="chat_dokter.html" className="layanan-list-item">
+        <a href="chat_dokterpage" className="layanan-list-item">
           <div className="layanan-list-icon bg-sky">
             <i className="fa-solid fa-user-doctor icon-sky"></i>
           </div>
@@ -65,7 +65,7 @@ export default function LayananHtmlPage() {
             </span>
           </div>
         </a>
-        <a href="toko.html" className="layanan-list-item">
+        <a href="tokopage" className="layanan-list-item">
           <div className="layanan-list-icon bg-red">
             <i className="fa-solid fa-store icon-red"></i>
           </div>
@@ -83,7 +83,7 @@ export default function LayananHtmlPage() {
         LAYANAN KHUSUS
       </div>
       <div className="layanan-list">
-        <a href="kesehatan_kulit.html" className="layanan-list-item">
+        <a href="kesehatan_kulitpage" className="layanan-list-item">
           <div className="layanan-list-icon bg-orange">
             <i className="fa-solid fa-spa icon-orange"></i>
           </div>
@@ -96,7 +96,7 @@ export default function LayananHtmlPage() {
             </span>
           </div>
         </a>
-        <a href="kesehatan_hewan.html" className="layanan-list-item">
+        <a href="kesehatan_hewanpage" className="layanan-list-item">
           <div className="layanan-list-icon bg-red">
             <i className="fa-solid fa-paw icon-red"></i>
           </div>
@@ -114,7 +114,7 @@ export default function LayananHtmlPage() {
         LENGKAPI KEBUTUHAN KESEHATANMU
       </div>
       <div className="layanan-list">
-        <a href="bmi.html" className="layanan-list-item">
+        <a href="bmipage" className="layanan-list-item">
           <div className="layanan-list-icon bg-amber">
             <i className="fa-solid fa-calculator icon-amber"></i>
           </div>
@@ -127,7 +127,7 @@ export default function LayananHtmlPage() {
             </span>
           </div>
         </a>
-        <a href="asuransi.html" className="layanan-list-item">
+        <a href="asuransipage" className="layanan-list-item">
           <div className="layanan-list-icon bg-sky">
             <i className="fa-solid fa-shield-heart icon-sky"></i>
           </div>

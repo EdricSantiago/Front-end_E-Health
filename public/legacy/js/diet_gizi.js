@@ -3,9 +3,9 @@ function openDietChat(doctorName) {
         doctorName = "Ahli Gizi";
     }
 
-    window.location.href = "chat_gizi.html?doctor=" + encodeURIComponent(doctorName);
+    window.location.href = "chat_gizipage?doctor=" + encodeURIComponent(doctorName);
 }
 
 function openDietInfo() {
-    window.location.href = "informasi_gizi.html";
+    window.location.href = "informasi_gizipage";
 }
