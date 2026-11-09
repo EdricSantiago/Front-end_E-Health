@@ -1,0 +1,344 @@
+.as-hero {
+    max-width: 1100px;
+    min-height: 320px;
+    margin: 20px auto 28px;
+    padding: 50px 40px;
+    background: linear-gradient(135deg, #fff1f2 0%, #ffffff 50%, #eff6ff 100%);
+    border: 1px solid #fecdd3;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.as-hero-text {
+    max-width: 550px;
+}
+
+.as-hero-text h1 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+}
+
+.as-hero-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.as-hero-text a,
+.as-btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 24px;
+    border: 1.5px solid var(--primary);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.as-hero-text a:hover,
+.as-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.as-btn-outline {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.as-btn-full {
+    width: 100%;
+    font-family: inherit;
+}
+
+.as-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.as-section h2 {
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.as-sub {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.as-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.as-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.as-info,
+.as-card,
+.as-step,
+.as-box {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.as-info {
+    padding: 25px;
+    text-align: left;
+}
+
+.as-info i {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 14px;
+}
+
+.as-info h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.as-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.as-card {
+    position: relative;
+    padding: 28px 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.as-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.as-card-populer {
+    border: 2px solid var(--primary);
+}
+
+.as-badge {
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.as-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.as-harga {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.as-harga span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.as-card ul {
+    list-style: none;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.as-card li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    padding: 6px 0 6px 22px;
+    position: relative;
+}
+
+.as-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.as-box {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 28px;
+    text-align: left;
+}
+
+.as-box label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+}
+
+.as-box input,
+.as-box select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.as-box input:focus,
+.as-box select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.as-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 14px 16px;
+    background-color: #fff1f2;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.as-total strong {
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.as-error {
+    color: #dc2626;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.as-box[hidden],
+.as-error[hidden] {
+    display: none;
+}
+
+.as-sukses {
+    text-align: center;
+}
+
+.as-sukses i {
+    font-size: 44px;
+    color: #16a34a;
+    margin-bottom: 10px;
+}
+
+.as-sukses p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.as-sukses .as-btn {
+    margin-top: 12px;
+}
+
+.as-link {
+    display: block;
+    margin: 14px auto 0;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.as-step {
+    padding: 22px 18px;
+}
+
+.as-step span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.as-step p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
+.as-faq details {
+    max-width: 700px;
+    margin: 0 auto 12px;
+    padding: 16px 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.as-faq summary {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.as-faq details p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+    .as-hero {
+        padding: 30px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .as-hero-text h1 {
+        font-size: 28px;
+    }
+
+    .as-grid,
+    .as-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}

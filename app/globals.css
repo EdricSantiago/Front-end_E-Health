@@ -1,0 +1,12 @@
+@import url('./styles/main.css');
+@import url('./styles/pages/booking.css');
+
+/* React-only extensions: original selectors and assets remain unchanged. */
+.hd-auth-feedback { font-size: 13px; font-weight: 600; border-radius: 8px; padding: 11px 14px; background: #fff0f3; color: #b42348; margin-top: 14px; }
+.hd-auth-feedback.ok { background: #e9f9ef; color: #167d42; }
+.hd-auth-extras { text-align: center; margin-top: 18px; font-size: 13px; color: #596277; }
+.hd-auth-extras button { background: none; color: #ed2a5c; font-weight: 700; padding: 2px; border: 0; cursor: pointer; }
+.hd-auth-hint { color: #6b7280; background: #f6f7fb; font-size: 12px; padding: 8px 12px; border-radius: 8px; margin-top: 12px; text-align: center; }
+.hd-auth-loading {min-height: 100vh;display: grid;place-items: center;color: #ed2a5c;font-weight: 700;}
+
+.hd-login-btn { border: 0; cursor: pointer; font-family: inherit; }
