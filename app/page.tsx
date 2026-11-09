@@ -18,19 +18,19 @@ export default function HomePage() {
               Konsultasi dokter, beli obat, dan cek kesehatan dalam satu aplikasi.
             </p>
             <div className="hd-hero-actions">
-                <a href="pages/kesehatan_kulitpage" className="hd-btn-primary">
+                <a href="/layanan/kulit" className="hd-btn-primary">
                 Chat Dokter
                     </a>
-                        <a href="pages/tokopage" className="hd-btn-outline">
+                        <a href="/toko" className="hd-btn-outline">
                         Beli Obat
                             </a>
-                                 <a href="pages/bmipage" className="hd-btn-outline">
+                                 <a href="/layanan/bmi" className="hd-btn-outline">
                                  Cek BMI
                     </a>
                         </div>
           </div>
           <div className="hd-hero-visual">
-            <img src="assets/images/hero.jpg" alt="Ilustrasi kesehatan" />
+            <img src="/assets/images/hero.jpg" alt="Ilustrasi kesehatan" />
           </div>
         </div>
       </section>
@@ -41,14 +41,14 @@ export default function HomePage() {
       </section>
       <section className="hd-banner-carousel">
         <div className="hd-banner-track" id="banner-track">
-          <a href="pages/kesehatan_kulitpage" className="hd-banner-slide active">
-            <img src="assets/images/banner1.jpg" alt="Promo chat dokter" />
+          <a href="/layanan/kulit" className="hd-banner-slide active">
+            <img src="/assets/images/banner1.jpg" alt="Promo chat dokter" />
           </a>
-          <a href="pages/tokopage" className="hd-banner-slide">
-            <img src="assets/images/banner2.jpg" alt="Promo toko obat" />
+          <a href="/toko" className="hd-banner-slide">
+            <img src="/assets/images/banner2.jpg" alt="Promo toko obat" />
           </a>
-          <a href="pages/bmipage" className="hd-banner-slide">
-            <img src="assets/images/banner3.jpg" alt="Promo cek BMI" />
+          <a href="/layanan/bmi" className="hd-banner-slide">
+            <img src="/assets/images/banner3.jpg" alt="Promo cek BMI" />
           </a>
         </div>
         <div className="hd-banner-dots" id="banner-dots">
@@ -61,47 +61,47 @@ export default function HomePage() {
         <h2>
           Layanan Kesehatan
         </h2>
-        <a href="pages/layananpage" className="hd-see-all">
+        <a href="/layanan" className="hd-see-all">
           Lihat Semua
         </a>
         <div className="hd-service-grid" id="menu-grid">
-          <a href="pages/daftar_dokterpage" className="hd-svc">
+          <a href="/dokter" className="hd-svc">
             <i className="fa-solid fa-calendar-check"></i>
             <span>
               Booking Dokter
             </span>
           </a>
-          <a href="pages/tokopage" className="hd-svc">
+          <a href="/toko" className="hd-svc">
             <i className="fa-solid fa-pills"></i>
             <span>
               Toko Obat
             </span>
           </a>
-          <a href="pages/bmipage" className="hd-svc">
+          <a href="/layanan/bmi" className="hd-svc">
             <i className="fa-solid fa-weight-scale"></i>
             <span>
               Kalkulator BMI
             </span>
           </a>
-          <a href="pages/kesehatan_kulitpage" className="hd-svc">
+          <a href="/layanan/kulit" className="hd-svc">
             <i className="fa-solid fa-hand-dots"></i>
             <span>
               Kesehatan Kulit
             </span>
           </a>
-          <a href="pages/kesehatan_hewanpage" className="hd-svc">
+          <a href="/layanan/hewan" className="hd-svc">
             <i className="fa-solid fa-paw"></i>
             <span>
               Hewan Peliharaan
             </span>
           </a>
-          <a href="pages/informasi_kulitpage" className="hd-svc">
+          <a href="/layanan/kulit/info" className="hd-svc">
             <i className="fa-solid fa-circle-info"></i>
             <span>
               Info Kesehatan
             </span>
           </a>
-          <a href="pages/asuransipage" className="hd-svc">
+          <a href="/layanan/asuransi" className="hd-svc">
             <i className="fa-solid fa-shield-heart"></i>
             <span>
               Asuransi
@@ -114,7 +114,7 @@ export default function HomePage() {
           <h2>
             Dokter Rekomendasi
           </h2>
-          <a href="pages/daftar_dokterpage" className="hd-see-all">
+          <a href="/dokter" className="hd-see-all">
             Lihat Semua
           </a>
         </div>
@@ -123,7 +123,7 @@ export default function HomePage() {
             <span className="hd-doc-status">
               ● Online
             </span>
-            <img src="assets/images/doctors/andini.jpg" alt="dr. Andini Putri" className="hd-doc-avatar" />
+            <img src="/assets/images/doctors/andini.jpg" alt="dr. Andini Putri" className="hd-doc-avatar" />
             <h3>
               dr. Andini Putri
             </h3>
@@ -138,7 +138,7 @@ export default function HomePage() {
                 8 thn
               </span>
             </div>
-            <a href="pages/chat_dokterpage?dokter=dr.%20Andini%20Putri&spesialis=Dokter%20Kulit" className="hd-doc-btn">
+            <a href="/dokter/chat?doctor=dr.%20Andini%20Putri&specialist=Dokter%20Kulit" className="hd-doc-btn">
               Chat Dokter
             </a>
           </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
             <span className="hd-doc-status">
               ● Online
             </span>
-            <img src="assets/images/doctors/raka.jpg" alt="dr. Raka Pratama" className="hd-doc-avatar" />
+            <img src="/assets/images/doctors/raka.jpg" alt="dr. Raka Pratama" className="hd-doc-avatar" />
             <h3>
               dr. Raka Pratama
             </h3>
@@ -161,7 +161,7 @@ export default function HomePage() {
                 5 thn
               </span>
             </div>
-            <a href="pages/chat_dokterpage?dokter=dr.%20Raka%20Pratama&spesialis=Dokter%20Umum" className="hd-doc-btn">
+            <a href="/dokter/chat?doctor=dr.%20Raka%20Pratama&specialist=Dokter%20Umum" className="hd-doc-btn">
               Chat Dokter
             </a>
           </div>
@@ -169,7 +169,7 @@ export default function HomePage() {
             <span className="hd-doc-status">
               ● Online
             </span>
-            <img src="assets/images/doctors/citra.jpg" alt="dr. Citra Lestari" className="hd-doc-avatar" />
+            <img src="/assets/images/doctors/citra.jpg" alt="dr. Citra Lestari" className="hd-doc-avatar" />
             <h3>
               dr. Citra Lestari
             </h3>
@@ -184,7 +184,7 @@ export default function HomePage() {
                 10 thn
               </span>
             </div>
-            <a href="pages/chat_dokterpage?dokter=dr.%20Citra%20Lestari&spesialis=Dokter%20Anak" className="hd-doc-btn">
+            <a href="/dokter/chat?doctor=dr.%20Citra%20Lestari&specialist=Dokter%20Anak" className="hd-doc-btn">
               Chat Dokter
             </a>
           </div>
@@ -192,7 +192,7 @@ export default function HomePage() {
             <span className="hd-doc-status hd-offline">
               ● Sibuk
             </span>
-            <img src="assets/images/doctors/budi.jpg" alt="dr. Budi Santoso" className="hd-doc-avatar" />
+            <img src="/assets/images/doctors/budi.jpg" alt="dr. Budi Santoso" className="hd-doc-avatar" />
             <h3>
               dr. Budi Santoso
             </h3>
@@ -218,8 +218,8 @@ export default function HomePage() {
           Artikel Kesehatan
         </h2>
         <div className="hd-article-grid">
-          <a href="pages/informasi_kulitpage" className="hd-article">
-            <img src="assets/images/articles/artikel1.jpg" alt="" className="hd-article-img" />
+          <a href="/layanan/kulit/info" className="hd-article">
+            <img src="/assets/images/articles/artikel1.jpg" alt="" className="hd-article-img" />
             <div className="hd-article-body">
               <h3>
                 5 Tips Menjaga Daya Tahan Tubuh
@@ -232,8 +232,8 @@ export default function HomePage() {
               </span>
             </div>
           </a>
-          <a href="pages/tokopage" className="hd-article">
-            <img src="assets/images/articles/artikel2.jpg" alt="" className="hd-article-img" />
+          <a href="/toko" className="hd-article">
+            <img src="/assets/images/articles/artikel2.jpg" alt="" className="hd-article-img" />
             <div className="hd-article-body">
               <h3>
                 Panduan Memilih Vitamin yang Tepat
@@ -246,8 +246,8 @@ export default function HomePage() {
               </span>
             </div>
           </a>
-          <a href="pages/bmipage" className="hd-article">
-            <img src="assets/images/articles/artikel3.jpg" alt="" className="hd-article-img" />
+          <a href="/layanan/bmi" className="hd-article">
+            <img src="/assets/images/articles/artikel3.jpg" alt="" className="hd-article-img" />
             <div className="hd-article-body">
               <h3>
                 Olahraga Ringan untuk Kesehatan
