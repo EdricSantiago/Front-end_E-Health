@@ -18,19 +18,16 @@ export default function HomePage() {
               Konsultasi dokter, beli obat, dan cek kesehatan dalam satu aplikasi.
             </p>
             <div className="hd-hero-actions">
-                <a href="/layanan/kulit" className="hd-btn-primary">
+              <a href="/layanan/kulit" className="hd-btn-primary">
                 Chat Dokter
-                    </a>
-                        <a href="/toko" className="hd-btn-outline">
-                        Beli Obat
-                        <a href="/layanan/bmi" className="hd-btn-outline">
-               Cek BMI
-                      </a>
-                            </a>
-                                 <a href="/layanan/bmi" className="hd-btn-outline">
-                                 Cek BMI
-                    </a>
-                        </div>
+              </a>
+              <a href="/toko" className="hd-btn-outline">
+                Beli Obat
+              </a>
+              <a href="/layanan/bmi" className="hd-btn-outline">
+                Cek BMI
+              </a>
+            </div>
           </div>
           <div className="hd-hero-visual">
             <img src="/assets/images/hero.jpg" alt="Ilustrasi kesehatan" />
